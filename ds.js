@@ -77,7 +77,8 @@ function svg(inner,sz){return `<svg width="${sz}" height="${sz}" viewBox="0 0 24
 function ico(name,sz){return svg(ICONS[name]||"",sz||20);}
 
 /* ---- category tiles (colored circle + white glyph) ---- */
-const W='stroke="#fff" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"';
+/* category glyphs use currentColor (model: fixed neutral tile + COLOURED glyph) */
+const W='stroke="currentColor" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"';
 const CATS={
  food:["#F59E0B",`<path d="M5 3v7a3 3 0 0 0 3 3v8M8 3v7M18 3c-1.5 0-2.5 2-2.5 5v4H18V3Zm0 11v7" ${W}/>`],
  coffee:["#B07A4A",`<path d="M5 8h11v5a5 5 0 0 1-5 5H10a5 5 0 0 1-5-5V8ZM16 9h2a2 2 0 0 1 0 6h-2M8 3v2M11 3v2" ${W}/>`],
@@ -89,7 +90,8 @@ const CATS={
  travel:["#16BFA6",`<path d="M2 16l9-3 7-7a2 2 0 0 1 3 3l-7 7-3 9-2-6-7-3Z" ${W}/>`],
  home:["#E5544E",`<path d="M4 11 12 5l8 6M6 10v9h12v-9" ${W}/>`]
 };
-function catTile(name,sz){const c=CATS[name]||["#888",""];return `<span class="circ" style="width:${sz}px;height:${sz}px;border-radius:14px;background:${c[0]};box-shadow:0 5px 12px color-mix(in srgb,${c[0]} 40%,transparent)">${svg(c[1],sz*0.52)}</span>`;}
+// fixed neutral tile + coloured glyph (icon-colour model, locked)
+function catTile(name,sz){const c=CATS[name]||["#888",""];return `<span class="circ" style="width:${sz}px;height:${sz}px;border-radius:14px;background:var(--catTile);border:1px solid var(--catTileBorder);color:${c[0]}">${svg(c[1],Math.round(sz*0.56))}</span>`;}
 
 /* ---- phone chrome ---- */
 function navHTML(active){const items=["home","activity","budget","you"];
