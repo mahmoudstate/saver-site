@@ -63,7 +63,15 @@ const ICONS={
  budget:`<path d="M21 12A9 9 0 1 1 12 3v9z" ${SS}/>`,
  you:`<circle cx="12" cy="8" r="4" ${SS}/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" ${SS}/>`,
  shield:`<path d="M12 3 5 6v5c0 4.5 3 7.7 7 9 4-1.3 7-4.5 7-9V6l-7-3Z" ${SS}/>`,
- sparkles:`<path d="M12 3l1.8 4.7L18 9.5l-4.2 1.8L12 16l-1.8-4.7L6 9.5l4.2-1.8L12 3Z" ${SS}/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14Z" ${SS}/>`
+ sparkles:`<path d="M12 3l1.8 4.7L18 9.5l-4.2 1.8L12 16l-1.8-4.7L6 9.5l4.2-1.8L12 3Z" ${SS}/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14Z" ${SS}/>`,
+ palette:`<path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.6 0-.5-.3-.9-.5-1.3-.2-.3-.4-.7-.4-1.1 0-.9.7-1.5 1.6-1.5H16a5 5 0 0 0 5-5c0-3.9-4-7.4-9-7.4Z" ${SS}/><circle cx="7.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11" r="1.2" fill="currentColor" stroke="none"/>`,
+ book:`<path d="M5 4h12a2 2 0 0 1 2 2v14H7a2 2 0 0 0-2 2V4Z" ${SS}/><path d="M5 4v16" ${SS}/>`,
+ download:`<path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14" ${SS}/>`,
+ trash:`<path d="M4 7h16M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M6 7l1 13h10l1-13" ${SS}/>`,
+ grip:`<circle cx="9" cy="6" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="6" r="1.4" fill="currentColor" stroke="none"/><circle cx="9" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="9" cy="18" r="1.4" fill="currentColor" stroke="none"/><circle cx="15" cy="18" r="1.4" fill="currentColor" stroke="none"/>`,
+ pencil:`<path d="M4 20h4L18.5 9.5a2 2 0 0 0-3-3L4 16v4Z" ${SS}/>`,
+ moon:`<path d="M21 12.8A8 8 0 1 1 11.2 3a6 6 0 0 0 9.8 9.8Z" ${SS}/>`,
+ sun:`<circle cx="12" cy="12" r="4" ${SS}/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M19 5l-1.5 1.5M6.5 17.5 5 19" ${SS}/>`
 };
 function svg(inner,sz){return `<svg width="${sz}" height="${sz}" viewBox="0 0 24 24">${inner}</svg>`;}
 function ico(name,sz){return svg(ICONS[name]||"",sz||20);}
