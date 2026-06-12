@@ -81,9 +81,11 @@ This document is the single source of truth for the **new Saver** project. Keep 
 ---
 
 ## 7. Phased plan & status
-- **Phase 0 — Repair** ▶️ *in progress*
+- **Phase 0 — Repair** ✅ *done*
   - [x] Create `PROGRESS.md` (this file).
-  - [ ] Restore `index.html` Foundations **original ordering** + **Arabic-font section** (IBM Plex Sans Arabic locked) + **Docs/Constitution tab** (renders `DESIGN.md`), updated to the new system.
+  - [x] Restore `index.html` Foundations **original ordering** (01 Colour · 02 Typography · 02b Arabic · 03 Spacing/Radius/Motion · 04 Iconography · 05 Buttons · 06 Inputs · 07 Data · 08 Hero).
+  - [x] **Arabic-font section** restored; **IBM Plex Sans Arabic** locked; `ds.css` adds `:lang(ar),[dir=rtl]` font + RTL rule.
+  - [x] **Docs/Constitution tab** restored (Showcase/Docs toggle) rendering `DESIGN.md` via a **tiny inline markdown renderer** (no CDN — works offline). ⚠️ Constitution *content* still reflects the OLD system → update text to new system later (Phase 1/2).
 - **Phase 1 — Lock foundations** ⏳
   - [ ] Update `ds.js catTile()` to **fixed tile + coloured glyph** model; propagate to all screens.
   - [ ] Curate final **calm accent palette** (verify dark+light); update `ds.js ACCENTS`.

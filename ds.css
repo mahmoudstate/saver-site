@@ -59,6 +59,9 @@ body{background:var(--stage);color:var(--text);font-family:'DM Sans',system-ui,-
 .tnum{font-variant-numeric:tabular-nums}
 .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
 a{color:inherit}
+/* Arabic / RTL — locale font token (Latin = DM Sans, Arabic = IBM Plex Sans Arabic) */
+:lang(ar),[dir="rtl"]{font-family:'IBM Plex Sans Arabic','DM Sans',system-ui,sans-serif;line-height:1.7}
+[dir="rtl"]{text-align:right}
 
 /* ---------- 3. TYPOGRAPHY ---------- */
 .display{font-size:46px;font-weight:800;letter-spacing:-2px;line-height:1}
