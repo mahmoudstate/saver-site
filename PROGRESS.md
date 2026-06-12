@@ -76,6 +76,7 @@ This document is the single source of truth for the **new Saver** project. Keep 
 5. Keep **this file updated** after each step.
 6. Commit to dev branch; merge to `main` only when user wants it live.
 7. Replies to the user are in **Arabic** (technical terms in English ok).
+8. **Feature reference = OLD app code.** When the user requests a change, or says a feature is missing / was forgotten / "how does X work", **FIRST read the relevant logic in `saver-test/src/App.jsx`** (read-only) to learn exactly how that feature behaves in the live app, **THEN** re-implement it in the new design with the new visual language. `saver-test` = functional spec; `saver-site` = new look. Never assume behaviour — verify it in the old code.
 
 ---
 
@@ -135,5 +136,7 @@ This document is the single source of truth for the **new Saver** project. Keep 
 Tabs: dashboard, add, savings(goals), history(activity), budgets, quickactions, manual, monthly(subscriptions+installments), settings, privacy. Concepts: Total balance, **Net saved**, **Safe to spend**, Accounts (banks+cash, per-colour, low-balance alert, ledger), Categories (glyph+colour), **Spending Groups**, Budgets (per category, rollover), Savings goals (target, glyph, colour, %, spendingMode, freeze/withdraw/archive), Bills = Subscriptions + Installments (record payment), **Quick Actions** (≤4, long-press +), month selector, customizable/reorderable dashboard, PWA/offline, backup/restore, coach tour. Currencies: EGP(default), GBP, USD, EUR, SAR, AED. Semantic colours: red=out, accent(mint)=in/primary, yellow=goals, blue/purple/orange.
 
 ---
+
+> **Reminder:** `saver-test/src/App.jsx` (~3500 lines) is the behavioural spec. Grep it for the feature, read it, then design the new version. Do not edit it.
 
 _Last updated: 2026-06-12 · maintained by the design agent. Update this after every step._
