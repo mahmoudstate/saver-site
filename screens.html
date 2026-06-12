@@ -1,12 +1,24 @@
 <!doctype html><html lang="en" data-theme="dark"><head>
 <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Saver — Screens</title>
-<meta name="description" content="Saver app screens — built on the Saver design system."/>
+<meta name="description" content="Every Saver screen, numbered — built on the Saver design system."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="ds.css">
-<style>.grid-screens{display:flex;flex-wrap:wrap;gap:54px 44px;justify-content:center;padding:46px 0 70px}</style>
-</head><body>
+<style>
+.grid-screens{display:flex;flex-wrap:wrap;gap:50px 40px;justify-content:center;padding:34px 0 50px}
+.group-h{flex-basis:100%;margin:26px 4px 0}
+.group-h .k{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ac)}
+.group-h .t{font-size:22px;font-weight:800;letter-spacing:-.6px;margin-top:5px}
+.cap .no{display:inline-block;font-size:11px;font-weight:800;color:var(--ac);background:var(--acDim);border-radius:7px;padding:2px 8px;margin-bottom:7px;font-variant-numeric:tabular-nums}
+/* small in-screen helpers */
+.sheet{position:absolute;left:0;right:0;bottom:0;background:var(--bg);border-radius:26px 26px 0 0;padding:10px 20px 26px;box-shadow:0 -18px 40px rgba(0,0,0,.3);z-index:9}
+.sheet .grab{width:42px;height:5px;border-radius:999px;background:color-mix(in srgb,var(--text) 16%,transparent);margin:0 auto 16px}
+.dim{position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:8}
+.qgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.qa{display:flex;align-items:center;gap:12px;background:var(--surface);border:var(--cardBorder);box-shadow:var(--cardShadow);border-radius:16px;padding:13px}
+.qa .nm{font-size:13.5px;font-weight:700}.qa .am{font-size:12px;color:var(--muted);font-weight:600;margin-top:1px}
+</style></head><body>
 
 <div class="topbar"><div class="wrap rw">
   <div class="brand"><img src="icon.png" alt="Saver"/>Saver</div>
@@ -15,17 +27,19 @@
 </div></div>
 
 <header class="lead wrap">
-  <div class="eyebrow">Product · v2.3</div>
-  <div class="h1">Six screens, one system.</div>
-  <p>Every pixel comes from <strong>ds.css</strong> — themed hero, outlined cards, colour-coded amounts, animated and tinted live by your accent. Real Saver features: Net saved, Safe to spend, Accounts, Bills, Budgets, Goals.</p>
+  <div class="eyebrow">Product · v2.3 · 32 screens</div>
+  <div class="h1">Every screen, numbered.</div>
+  <p>The full Saver experience on one canvas — each screen numbered for quick reference. Want a change? Tell me the number. All built on <strong>ds.css</strong>, live theme &amp; accent. <em>Building in batches — 01–10 below.</em></p>
 </header>
 
 <main class="wrap"><div class="grid-screens">
 
-<!-- HOME -->
+<div class="group-h"><div class="k">A</div><div class="t">Core tabs</div></div>
+
+<!-- 01 HOME -->
 <div><div class="phone"><div class="screen" data-nav="home"><div class="content padnav">
   <div class="hero">
-    <div class="toprow"><div class="grow"></div><div class="hib" data-ico="eye"></div><div class="hib" data-ico="plus"></div></div>
+    <div class="toprow"><div class="grow"></div><div class="hib" data-ico="eye"></div><div class="hib" data-ico="bell"></div></div>
     <div class="lbl">Total balance</div>
     <div class="big tnum" data-count="2554" data-prefix="£">£2,554</div>
     <div class="sub">Safe to spend £1,930 &nbsp;·&nbsp; Net +£880</div>
@@ -35,9 +49,9 @@
   <div class="icard r" style="--d:.27s"><span data-cat="salary"></span><div><div class="nm">Salary</div><div class="mt">HSBC · Wed</div></div><div class="amt in tnum">+£1,000</div></div>
   <div class="icard r" style="--d:.32s"><span data-cat="bill"></span><div><div class="nm">Utilities</div><div class="mt">Bill · paid</div></div><div class="amt out tnum">−£10</div></div>
   <div class="icard r" style="--d:.37s"><span data-cat="shopping"></span><div><div class="nm">Groceries</div><div class="mt">Cash · Tue</div></div><div class="amt out tnum">−£35</div></div>
-</div></div></div><div class="cap"><b>Home</b><span>Balance · Net · recent</span></div></div>
+</div></div></div><div class="cap"><span class="no">01</span><b>Home</b><span>Balance · Net · recent</span></div></div>
 
-<!-- ACTIVITY -->
+<!-- 02 ACTIVITY -->
 <div><div class="phone"><div class="screen" data-nav="activity"><div class="content padnav">
   <div class="hero">
     <div class="toprow"><div class="ttl">Activity</div><div class="grow"></div><div class="hchip"><span data-ico="cal" data-sz="14"></span> June</div></div>
@@ -51,23 +65,9 @@
   <div class="over r" style="--d:.32s">Yesterday</div>
   <div class="icard r" style="--d:.36s"><span data-cat="salary"></span><div><div class="nm">Salary</div><div class="mt">HSBC · Income</div></div><div class="amt in tnum">+£1,000</div></div>
   <div class="icard r" style="--d:.4s"><span data-cat="transport"></span><div><div class="nm">Uber</div><div class="mt">Cash · Transport</div></div><div class="amt out tnum">−£9</div></div>
-</div></div></div><div class="cap"><b>Activity</b><span>Summary · grouped history</span></div></div>
+</div></div></div><div class="cap"><span class="no">02</span><b>Activity</b><span>Summary · grouped history</span></div></div>
 
-<!-- BILLS -->
-<div><div class="phone"><div class="screen" data-nav="none"><div class="content">
-  <div class="hero">
-    <div class="toprow"><div class="hib" data-ico="back"></div><div class="ttl">Bills</div><div class="grow"></div><div class="hib" data-ico="plus"></div></div>
-    <div class="lbl">Due this month</div>
-    <div class="big tnum" data-count="28" data-prefix="£">£28</div>
-    <div class="sub">4 active &nbsp;·&nbsp; 1 due soon &nbsp;·&nbsp; 0 overdue</div>
-  </div>
-  <div class="seg r" style="--d:.18s;margin-bottom:18px"><b class="on">Subscriptions</b><b>Installments</b></div>
-  <div class="icard r" style="--d:.22s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#E50914;font-weight:800;font-size:15px">N</span><div><div class="nm">Netflix</div><div class="mt">Monthly · next Jul 5</div></div><div class="amtb"><b class="tnum">£10</b><small style="color:var(--success)">Paid</small></div></div>
-  <div class="icard r" style="--d:.27s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#E60000;font-weight:800;font-size:15px">V</span><div><div class="nm">Vodafone</div><div class="mt">Mobile · monthly</div></div><div class="amtb"><b class="tnum">£12</b><small style="color:var(--yellow)">Due in 2d</small></div></div>
-  <div class="icard r" style="--d:.32s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#1DB954;font-weight:800;font-size:15px">S</span><div><div class="nm">Spotify</div><div class="mt">Monthly · next Jul 9</div></div><div class="amtb"><b class="tnum">£6</b><small style="color:var(--success)">Paid</small></div></div>
-</div></div></div><div class="cap"><b>Bills</b><span>Subscriptions &amp; installments</span></div></div>
-
-<!-- BUDGET -->
+<!-- 03 BUDGETS -->
 <div><div class="phone"><div class="screen" data-nav="budget"><div class="content padnav">
   <div class="hero">
     <div class="toprow"><div class="ttl">Budget</div><div class="grow"></div><div class="hchip"><span data-ico="cal" data-sz="14"></span> June</div></div>
@@ -80,9 +80,9 @@
   <div class="bcard r" style="--d:.26s"><div class="top"><span data-cat="food" data-csz="38"></span><div class="nm">Food &amp; Dining</div><div class="rt tnum">£60 / £150</div></div><div class="pbar bar" style="margin-top:12px"><i style="width:40%;background:var(--ac)"></i></div></div>
   <div class="bcard r" style="--d:.3s"><div class="top"><span data-cat="transport" data-csz="38"></span><div class="nm">Transport</div><div class="rt tnum">£40 / £120</div></div><div class="pbar bar" style="margin-top:12px"><i style="width:33%;background:var(--ac)"></i></div></div>
   <div class="bcard r" style="--d:.34s"><div class="top"><span data-cat="shopping" data-csz="38"></span><div class="nm">Shopping</div><div class="rt tnum" style="color:var(--red)">£200 / £230</div></div><div class="pbar bar" style="margin-top:12px"><i style="width:87%;background:var(--yellow)"></i></div></div>
-</div></div></div><div class="cap"><b>Budget</b><span>Spend · category limits</span></div></div>
+</div></div></div><div class="cap"><span class="no">03</span><b>Budgets</b><span>Spend · category limits</span></div></div>
 
-<!-- GOALS -->
+<!-- 04 GOALS -->
 <div><div class="phone"><div class="screen" data-nav="none"><div class="content">
   <div class="hero">
     <div class="toprow"><div class="hib" data-ico="back"></div><div class="ttl">Goals</div><div class="grow"></div><div class="hib" data-ico="plus"></div></div>
@@ -93,9 +93,38 @@
   <div class="bcard r" style="--d:.18s"><div class="top"><span data-cat="travel" data-csz="42"></span><div class="nm">Travel fund</div><div class="pct">40%</div></div><div class="nums"><div class="a tnum">£2,000</div><div class="b tnum">£3,000 left · £5,000</div></div><div class="pbar bar"><i style="width:40%;background:linear-gradient(90deg,var(--ac),var(--ac2))"></i></div></div>
   <div class="bcard r" style="--d:.24s"><div class="top"><span data-cat="phone" data-csz="42"></span><div class="nm">New phone</div><div class="pct">75%</div></div><div class="nums"><div class="a tnum">£600</div><div class="b tnum">£200 left · £800</div></div><div class="pbar bar"><i style="width:75%;background:linear-gradient(90deg,var(--ac),var(--ac2))"></i></div></div>
   <div class="frozen r" style="--d:.3s;margin-top:8px"><span data-ico="lock" data-sz="15"></span>Frozen &amp; safe — <b>£2,600</b> set aside</div>
-</div></div></div><div class="cap"><b>Goals</b><span>Savings · frozen funds</span></div></div>
+</div></div></div><div class="cap"><span class="no">04</span><b>Goals</b><span>Savings · frozen funds</span></div></div>
 
-<!-- ADD -->
+<!-- 05 BILLS · SUBSCRIPTIONS -->
+<div><div class="phone"><div class="screen" data-nav="none"><div class="content">
+  <div class="hero">
+    <div class="toprow"><div class="hib" data-ico="back"></div><div class="ttl">Bills</div><div class="grow"></div><div class="hib" data-ico="plus"></div></div>
+    <div class="lbl">Due this month</div>
+    <div class="big tnum" data-count="28" data-prefix="£">£28</div>
+    <div class="sub">4 active &nbsp;·&nbsp; 1 due soon &nbsp;·&nbsp; 0 overdue</div>
+  </div>
+  <div class="seg r" style="--d:.18s;margin-bottom:18px"><b class="on">Subscriptions</b><b>Installments</b></div>
+  <div class="icard r" style="--d:.22s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#E50914;font-weight:800;font-size:15px">N</span><div><div class="nm">Netflix</div><div class="mt">Monthly · next Jul 5</div></div><div class="amtb"><b class="tnum">£10</b><small style="color:var(--success)">Paid</small></div></div>
+  <div class="icard r" style="--d:.27s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#E60000;font-weight:800;font-size:15px">V</span><div><div class="nm">Vodafone</div><div class="mt">Mobile · monthly</div></div><div class="amtb"><b class="tnum">£12</b><small style="color:var(--yellow)">Due in 2d</small></div></div>
+  <div class="icard r" style="--d:.32s"><span class="circ" style="width:44px;height:44px;border-radius:14px;background:#1DB954;font-weight:800;font-size:15px">S</span><div><div class="nm">Spotify</div><div class="mt">Monthly · next Jul 9</div></div><div class="amtb"><b class="tnum">£6</b><small style="color:var(--success)">Paid</small></div></div>
+</div></div></div><div class="cap"><span class="no">05</span><b>Bills · Subscriptions</b><span>Recurring monthly</span></div></div>
+
+<!-- 06 BILLS · INSTALLMENTS -->
+<div><div class="phone"><div class="screen" data-nav="none"><div class="content">
+  <div class="hero">
+    <div class="toprow"><div class="hib" data-ico="back"></div><div class="ttl">Bills</div><div class="grow"></div><div class="hib" data-ico="plus"></div></div>
+    <div class="lbl">Remaining to pay</div>
+    <div class="big tnum" data-count="4200" data-prefix="£">£4,200</div>
+    <div class="sub">2 plans &nbsp;·&nbsp; £700 due this month</div>
+  </div>
+  <div class="seg r" style="--d:.18s;margin-bottom:18px"><b>Subscriptions</b><b class="on">Installments</b></div>
+  <div class="bcard r" style="--d:.22s"><div class="top"><span data-cat="phone" data-csz="40"></span><div class="nm">iPhone 15</div><div class="rt tnum">£200/mo</div></div><div class="nums"><div class="a tnum" style="font-size:14px;font-weight:700;color:var(--muted)">3 of 12 paid</div><div class="b tnum">£1,800 left</div></div><div class="pbar bar"><i style="width:25%;background:var(--ac)"></i></div></div>
+  <div class="bcard r" style="--d:.28s"><div class="top"><span data-cat="transport" data-csz="40"></span><div class="nm">Car loan</div><div class="rt tnum">£500/mo</div></div><div class="nums"><div class="a tnum" style="font-size:14px;font-weight:700;color:var(--muted)">8 of 24 paid</div><div class="b tnum">£2,400 left</div></div><div class="pbar bar"><i style="width:33%;background:var(--ac)"></i></div></div>
+</div></div></div><div class="cap"><span class="no">06</span><b>Bills · Installments</b><span>Pay-over-time plans</span></div></div>
+
+<div class="group-h"><div class="k">B</div><div class="t">Add &amp; input</div></div>
+
+<!-- 07 ADD · EXPENSE -->
 <div><div class="phone"><div class="screen" data-nav="none"><div class="content">
   <div class="hero">
     <div class="toprow"><div class="ttl">New expense</div><div class="grow"></div><div class="hib" data-ico="close"></div></div>
@@ -108,9 +137,59 @@
   <div class="field r" style="--d:.26s"><span data-cat="food" data-csz="42"></span><div><div class="fl">Category</div><div class="fv">Food &amp; Dining</div></div><span class="chev" data-ico="chev"></span></div>
   <div class="field note r" style="--d:.3s"><span data-ico="note" data-sz="19" style="color:var(--faint);margin-right:2px"></span>Add a note…</div>
   <div class="cta"><div class="btn btn-primary btn-full"><span data-ico="check" data-sz="19"></span>Add transaction</div></div>
-</div></div></div><div class="cap"><b>Add</b><span>Amount · account · category</span></div></div>
+</div></div></div><div class="cap"><span class="no">07</span><b>Add · Expense</b><span>Amount · account · category</span></div></div>
+
+<!-- 08 ADD · INCOME -->
+<div><div class="phone"><div class="screen" data-nav="none"><div class="content">
+  <div class="hero">
+    <div class="toprow"><div class="ttl">New income</div><div class="grow"></div><div class="hib" data-ico="close"></div></div>
+    <div class="lbl">Amount · GBP</div>
+    <div class="big tnum">+£1,000</div>
+    <div class="sub">Income · today</div>
+  </div>
+  <div class="seg r" style="--d:.18s;margin-bottom:16px"><b>Expense</b><b class="on">Income</b><b>Saving</b></div>
+  <div class="field r" style="--d:.22s"><span class="circ" style="width:42px;height:42px;border-radius:13px;background:#DB0011;font-weight:800;font-size:14px">H</span><div><div class="fl">To account</div><div class="fv">HSBC</div></div><span class="chev" data-ico="chev"></span></div>
+  <div class="field r" style="--d:.26s"><span data-cat="salary" data-csz="42"></span><div><div class="fl">Category</div><div class="fv">Salary</div></div><span class="chev" data-ico="chev"></span></div>
+  <div class="field note r" style="--d:.3s"><span data-ico="note" data-sz="19" style="color:var(--faint);margin-right:2px"></span>Monthly pay…</div>
+  <div class="cta"><div class="btn btn-primary btn-full"><span data-ico="check" data-sz="19"></span>Add income</div></div>
+</div></div></div><div class="cap"><span class="no">08</span><b>Add · Income</b><span>Money in</span></div></div>
+
+<!-- 09 ADD · SAVING -->
+<div><div class="phone"><div class="screen" data-nav="none"><div class="content">
+  <div class="hero">
+    <div class="toprow"><div class="ttl">Move to goal</div><div class="grow"></div><div class="hib" data-ico="close"></div></div>
+    <div class="lbl">Amount · GBP</div>
+    <div class="big tnum">+£200</div>
+    <div class="sub">Saving · frozen &amp; safe</div>
+  </div>
+  <div class="seg r" style="--d:.18s;margin-bottom:16px"><b>Expense</b><b>Income</b><b class="on">Saving</b></div>
+  <div class="field r" style="--d:.22s"><span class="circ" style="width:42px;height:42px;border-radius:13px;background:#DB0011;font-weight:800;font-size:14px">H</span><div><div class="fl">From account</div><div class="fv">HSBC</div></div><span class="chev" data-ico="chev"></span></div>
+  <div class="field r" style="--d:.26s"><span data-cat="travel" data-csz="42"></span><div><div class="fl">To goal</div><div class="fv">Travel fund</div></div><span class="chev" data-ico="chev"></span></div>
+  <div class="field note r" style="--d:.3s"><span data-ico="note" data-sz="19" style="color:var(--faint);margin-right:2px"></span>Add a note…</div>
+  <div class="cta"><div class="btn btn-primary btn-full"><span data-ico="lock" data-sz="18"></span>Move to goal</div></div>
+</div></div></div><div class="cap"><span class="no">09</span><b>Add · Saving</b><span>Set money aside</span></div></div>
+
+<!-- 10 QUICK ADD -->
+<div><div class="phone"><div class="screen" data-nav="home"><div class="content padnav" style="filter:saturate(.9)">
+  <div class="hero"><div class="toprow"><div class="grow"></div><div class="hib" data-ico="eye"></div><div class="hib" data-ico="bell"></div></div>
+    <div class="lbl">Total balance</div><div class="big tnum">£2,554</div><div class="sub">Safe to spend £1,930 · Net +£880</div></div>
+  <div class="sectit"><div class="t">Recent</div><div class="m">See all</div></div>
+  <div class="icard"><span data-cat="food"></span><div><div class="nm">Food &amp; Dining</div><div class="mt">HSBC · today</div></div><div class="amt out tnum">−£100</div></div>
+</div>
+<div class="dim"></div>
+<div class="sheet">
+  <div class="grab"></div>
+  <div class="sectit" style="margin:0 2px 14px"><div class="t">Quick add</div><div class="m">Long-press +</div></div>
+  <div class="qgrid">
+    <div class="qa"><span data-cat="coffee" data-csz="40"></span><div><div class="nm">Coffee</div><div class="am tnum">£4</div></div></div>
+    <div class="qa"><span data-cat="food" data-csz="40"></span><div><div class="nm">Lunch</div><div class="am tnum">£12</div></div></div>
+    <div class="qa"><span data-cat="transport" data-csz="40"></span><div><div class="nm">Transport</div><div class="am tnum">£9</div></div></div>
+    <div class="qa"><span data-cat="shopping" data-csz="40"></span><div><div class="nm">Groceries</div><div class="am tnum">£35</div></div></div>
+  </div>
+</div>
+</div></div><div class="cap"><span class="no">10</span><b>Quick Add</b><span>One-tap shortcuts sheet</span></div></div>
 
 </div></main>
-<footer class="foot"><div class="wrap">Six screens · gradient hero · light, dark, any accent · animated. Powered by Mahmoud © 2026</div></footer>
+<footer class="foot"><div class="wrap">Batch 1 of 4 · screens 01–10 · more coming. Powered by Mahmoud © 2026</div></footer>
 <script src="ds.js"></script>
 </body></html>
