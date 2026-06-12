@@ -1,0 +1,223 @@
+/* ============================================================
+   SAVER — DESIGN SYSTEM (ds.css)
+   Single source of truth: tokens + components.
+   Consumed by index.html (showcase), brand.html, screens.html
+   ============================================================ */
+
+/* ---------- 1. TOKENS ---------- */
+:root[data-theme="light"]{
+  --stage:#E7EAF0; --bg:#F4F4F8; --surface:#FFFFFF; --card:#FFFFFF; --surface2:#F1F2F6;
+  --border:#E6E7EE; --track:#EBECF1;
+  --text:#15161C; --muted:#6B7280; --faint:#AAAEBA;
+  --red:#E5544E; --redDim:#FCE9E8;
+  --blue:#2563EB; --blueDim:#DCE7FE;
+  --yellow:#D97706; --yellowDim:#FCEFD6;
+  --purple:#7C3AED; --purpleDim:#ECE5FE;
+  --orange:#EA580C; --orangeDim:#FCE6D8;
+  --success:#0E9F6E;
+  --cardShadow:0 1px 2px rgba(20,22,40,.04),0 6px 18px rgba(20,22,40,.05);
+  --cardBorder:1px solid var(--border);
+  --navShadow:0 12px 34px rgba(20,22,40,.13);
+  --elev:0 18px 44px rgba(20,22,40,.12);
+}
+:root[data-theme="dark"]{
+  --stage:#08090C; --bg:#0C0D11; --surface:#15161D; --card:#1E1E28; --surface2:#1E1E28;
+  --border:#26262F; --track:#24242E;
+  --text:#E9E9F1; --muted:#8A8AA4; --faint:#54546A;
+  --red:#F2766E; --redDim:#36201E;
+  --blue:#60A5FA; --blueDim:#16243A;
+  --yellow:#FBBF24; --yellowDim:#3A2C0C;
+  --purple:#A78BFA; --purpleDim:#241A3A;
+  --orange:#FB923C; --orangeDim:#3A2410;
+  --success:#34D399;
+  --cardShadow:none;
+  --cardBorder:1px solid var(--border);
+  --navShadow:0 16px 40px rgba(0,0,0,.55);
+  --elev:0 22px 50px rgba(0,0,0,.5);
+}
+:root{
+  /* accent (set live by ds.js) */
+  --ac:#5FE3C0; --ac2:#8af0d6; --onacc:#06251F;
+  --acDim:color-mix(in srgb,var(--ac) 14%,transparent);
+  /* hero — tinted by accent, always bright with dark text so it pops on any bg */
+  --heroGrad:linear-gradient(155deg, color-mix(in srgb,var(--ac) 40%,#fff) 0%, color-mix(in srgb,var(--ac) 66%,#fff) 100%);
+  --heroText:#15201C; --heroSub:rgba(21,30,28,.60); --heroChip:rgba(255,255,255,.22);
+  /* spacing scale (4pt) */
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s7:32px; --s8:40px;
+  /* radius */
+  --r-sm:12px; --r-md:16px; --r-lg:18px; --r-xl:22px; --r-2xl:26px; --r-pill:999px;
+  /* motion */
+  --e-out:cubic-bezier(.22,.7,.2,1); --e-soft:cubic-bezier(.3,.8,.3,1);
+  --t-micro:.15s; --t-base:.4s;
+}
+
+/* ---------- 2. BASE ---------- */
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{background:var(--stage);color:var(--text);font-family:'DM Sans',system-ui,-apple-system,sans-serif;
+  font-feature-settings:"tnum";line-height:1.5;-webkit-font-smoothing:antialiased;transition:background var(--t-base),color var(--t-base)}
+.tnum{font-variant-numeric:tabular-nums}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+
+/* ---------- 3. TYPOGRAPHY ---------- */
+.display{font-size:46px;font-weight:800;letter-spacing:-2px;line-height:1}
+.h1{font-size:38px;font-weight:800;letter-spacing:-1.3px;line-height:1.06}
+.h2{font-size:26px;font-weight:800;letter-spacing:-.7px;line-height:1.12}
+.title{font-size:17px;font-weight:800;letter-spacing:-.3px}
+.body{font-size:15px;font-weight:500}
+.label{font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--faint)}
+.caption{font-size:12.5px;color:var(--muted);font-weight:500}
+
+/* ---------- 4. HUB CHROME (showcase/brand/screens shell) ---------- */
+.topbar{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--stage) 82%,transparent);
+  backdrop-filter:blur(14px);border-bottom:1px solid color-mix(in srgb,var(--text) 8%,transparent)}
+.topbar .rw{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.5px;font-size:18px}
+.brand img{width:30px;height:30px;border-radius:9px}
+.hubnav{display:flex;gap:5px}
+.hubnav a{color:var(--muted);text-decoration:none;font-weight:700;font-size:13px;padding:7px 12px;border-radius:var(--r-pill)}
+.hubnav a.on{color:var(--ac);background:var(--acDim)}
+.controls{display:flex;align-items:center;gap:13px}
+.dots{display:flex;gap:7px}
+.dot{width:21px;height:21px;border-radius:50%;cursor:pointer;border:2px solid transparent;transition:transform var(--t-micro)}
+.dot:hover{transform:scale(1.12)}.dot[aria-current="true"]{border-color:var(--text)}
+.tgl{display:flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:var(--r-pill);
+  padding:7px 13px;cursor:pointer;font-weight:700;font-size:12px;color:var(--muted)}
+header.lead{padding:48px 0 6px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ac)}
+.lead .h1{margin:12px 0 12px}
+.lead p{font-size:16px;color:var(--muted);max-width:600px}
+.foot{padding:34px 0 64px;text-align:center;color:var(--muted)}
+/* showcase sections */
+.section{padding:40px 0 8px}
+.sec-h{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--ac)}
+.sec-t{font-size:28px;font-weight:800;letter-spacing:-.9px;margin:10px 0 6px}
+.sec-d{color:var(--muted);font-size:15px;max-width:620px;margin-bottom:22px}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:760px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- 5. SURFACES ---------- */
+.card{background:var(--card);border-radius:var(--r-xl);box-shadow:var(--cardShadow);border:var(--cardBorder);padding:var(--s6)}
+.tile{background:var(--surface);border:var(--cardBorder);border-radius:var(--r-lg);padding:var(--s4)}
+.sectit{display:flex;align-items:center;justify-content:space-between;margin:6px 2px 13px}
+.sectit .t{font-size:14px;font-weight:800;letter-spacing:-.2px}
+.sectit .m{font-size:12.5px;font-weight:700;color:var(--ac)}
+.over{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin:2px 2px 11px}
+
+/* ---------- 6. BUTTONS / CHIPS / PILLS ---------- */
+.btn{height:52px;padding:0 22px;border:none;border-radius:var(--r-md);font-family:inherit;font-weight:800;font-size:15px;
+  cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform var(--t-micro)}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--onacc);
+  box-shadow:0 13px 28px color-mix(in srgb,var(--ac) 34%,transparent)}
+.btn-secondary{background:var(--surface2);color:var(--text);border:1px solid var(--border)}
+.btn-ghost{background:transparent;color:var(--ac)}
+.btn-full{width:100%}
+.pill{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:12.5px;padding:5px 11px;border-radius:var(--r-pill);
+  background:var(--acDim);color:var(--ac)}
+.pill-red{background:var(--redDim);color:var(--red)}
+.pill-yellow{background:var(--yellowDim);color:var(--yellow)}
+.pill-green{background:color-mix(in srgb,var(--success) 13%,transparent);color:var(--success)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);color:var(--muted);font-weight:700;font-size:12.5px;padding:7px 13px;border-radius:var(--r-pill);border:1px solid var(--border)}
+
+/* ---------- 7. ICONS / CATEGORY CIRCLES ---------- */
+.ib{width:40px;height:40px;border-radius:50%;background:var(--surface);box-shadow:var(--cardShadow);border:var(--cardBorder);
+  display:flex;align-items:center;justify-content:center;color:var(--text);flex-shrink:0;cursor:pointer}
+.circ{display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
+
+/* ---------- 8. LIST ROW (icard) ---------- */
+.icard{display:flex;align-items:center;gap:13px;background:var(--surface);border:var(--cardBorder);box-shadow:var(--cardShadow);
+  border-radius:var(--r-lg);padding:13px 15px;margin-bottom:11px}
+.icard .nm{font-size:14.5px;font-weight:700}
+.icard .mt{font-size:12px;color:var(--muted);font-weight:500;margin-top:1px}
+.amt{margin-left:auto;font-size:16px;font-weight:800;letter-spacing:-.3px;text-align:right}
+.amt.in{color:var(--success)} .amt.out{color:var(--red)}
+.amtb{margin-left:auto;text-align:right}
+.amtb b{font-size:15px;font-weight:800;letter-spacing:-.3px}
+.amtb small{display:block;font-size:11px;font-weight:700;margin-top:2px}
+
+/* ---------- 9. SEGMENTED ---------- */
+.seg{display:flex;background:var(--surface2);border:1px solid var(--border);border-radius:var(--r-pill);padding:5px;gap:5px}
+.seg b{flex:1;text-align:center;font-size:13px;font-weight:700;padding:10px 0;border-radius:var(--r-pill);color:var(--muted);cursor:pointer;transition:color var(--t-micro)}
+.seg b.on{background:var(--surface);color:var(--ac);box-shadow:var(--cardShadow)}
+
+/* ---------- 10. PROGRESS / RING ---------- */
+.pbar{height:8px;border-radius:var(--r-pill);background:var(--track);overflow:hidden}
+.pbar i{display:block;height:100%;border-radius:var(--r-pill)}
+.bar i{animation:grow .9s var(--e-soft) both;animation-delay:.45s}
+.bcard{background:var(--surface);border:var(--cardBorder);box-shadow:var(--cardShadow);border-radius:var(--r-lg);padding:15px 16px;margin-bottom:12px}
+.bcard .top{display:flex;align-items:center;gap:12px}
+.bcard .nm{font-size:14.5px;font-weight:700}
+.bcard .rt{margin-left:auto;font-size:13px;font-weight:700;color:var(--muted)}
+.bcard .pct{margin-left:auto;font-size:12.5px;font-weight:700;color:var(--ac);background:var(--acDim);padding:4px 11px;border-radius:var(--r-pill)}
+.bcard .nums{display:flex;justify-content:space-between;align-items:baseline;margin:14px 0 11px}
+.bcard .nums .a{font-size:18px;font-weight:800;letter-spacing:-.4px}
+.bcard .nums .b{font-size:12.5px;color:var(--muted);font-weight:600}
+.bcard .pbar{margin-top:12px}
+.ring{position:relative;flex-shrink:0}
+.ring .v{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring .v b{font-size:27px;font-weight:800;letter-spacing:-1px}
+.ring .v small{font-size:9.5px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:2px}
+
+/* ---------- 11. FIELDS (forms) ---------- */
+.field{display:flex;align-items:center;gap:13px;background:var(--surface);border:var(--cardBorder);box-shadow:var(--cardShadow);
+  border-radius:var(--r-md);padding:14px 16px;margin-bottom:12px}
+.field .fl{font-size:10.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--faint)}
+.field .fv{font-size:15px;font-weight:700;margin-top:2px}
+.field .chev{margin-left:auto;color:var(--faint)}
+.field.note{color:var(--muted);font-weight:500;font-size:14.5px}
+
+/* ---------- 12. BANNERS ---------- */
+.insight{display:flex;align-items:center;gap:10px;background:color-mix(in srgb,var(--success) 13%,transparent);color:var(--success);
+  font-weight:700;font-size:13.5px;padding:13px 16px;border-radius:var(--r-sm);}
+.frozen{display:flex;align-items:center;justify-content:center;gap:9px;color:var(--muted);font-weight:600;font-size:13px}
+.frozen b{color:var(--text);font-weight:800}
+
+/* ---------- 13. PHONE / SCREEN ---------- */
+.phone{width:390px;height:844px;border-radius:54px;background:#0c0d11;padding:12px;
+  box-shadow:0 44px 80px rgba(8,9,14,.42),0 14px 36px rgba(8,9,14,.28)}
+.screen{width:100%;height:100%;border-radius:44px;overflow:hidden;background:var(--bg);position:relative;display:flex;flex-direction:column}
+.statusbar{position:absolute;top:0;left:0;right:0;z-index:12;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 28px 0;font-size:13.5px;font-weight:700;color:var(--heroText)}
+.statusbar .ic{display:flex;gap:6px;align-items:center}
+.content{flex:1;overflow:hidden;padding:0 20px}
+.content.padnav{padding-bottom:100px}
+.cap{text-align:center;margin-top:20px}
+.cap b{font-size:15px;font-weight:800;letter-spacing:-.3px}
+.cap span{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+
+/* ---------- 14. GRADIENT HERO ---------- */
+.hero{margin:0 -20px 20px;padding:54px 24px 28px;background:var(--heroGrad);color:var(--heroText);
+  border-radius:0 0 32px 32px;animation:hero-in .7s var(--e-out) both;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-40px;top:-50px;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.14)}
+.hero .toprow{display:flex;align-items:center;gap:12px;margin-bottom:20px;position:relative;z-index:1}
+.hero .toprow .ttl{font-size:17px;font-weight:800;letter-spacing:-.3px}
+.hero .grow{flex:1}
+.hib{width:38px;height:38px;border-radius:50%;background:var(--heroChip);color:var(--heroText);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer}
+.hero .hchip{display:inline-flex;align-items:center;gap:6px;background:var(--heroChip);color:var(--heroText);font-weight:700;font-size:12.5px;padding:7px 13px;border-radius:var(--r-pill)}
+.hero .lbl{font-size:11.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--heroSub);position:relative;z-index:1}
+.hero .big{font-size:46px;font-weight:800;letter-spacing:-2px;line-height:1;margin-top:9px;position:relative;z-index:1}
+.hero .sub{font-size:13.5px;font-weight:600;color:var(--heroSub);margin-top:13px;position:relative;z-index:1}
+
+/* ---------- 15. BOTTOM NAV (minimal) ---------- */
+.nav{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);display:flex;align-items:center;gap:8px;
+  background:var(--surface);box-shadow:var(--navShadow);border:var(--cardBorder);border-radius:var(--r-pill);padding:9px 12px;z-index:8}
+.nav .it{width:46px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--faint);border-radius:13px}
+.nav .it.on{color:var(--ac);background:var(--acDim)}
+.fab{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--onacc);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 12px 22px color-mix(in srgb,var(--ac) 38%,transparent);margin:0 5px}
+.hind{position:absolute;left:50%;bottom:7px;transform:translateX(-50%);width:120px;height:5px;border-radius:var(--r-pill);
+  background:color-mix(in srgb,var(--text) 15%,transparent);z-index:8}
+
+/* ---------- 16. ADD (sticky cta) ---------- */
+.cta{position:absolute;left:20px;right:20px;bottom:24px}
+
+/* ---------- 17. MOTION KEYFRAMES ---------- */
+@keyframes up{to{opacity:1;transform:none}}
+.reveal,.r{opacity:0;transform:translateY(16px);animation:up .6s var(--e-out) forwards;animation-delay:var(--d,0s)}
+@keyframes grow{from{width:0}}
+@keyframes hero-in{from{opacity:0;transform:scale(1.04)}to{opacity:1;transform:none}}
+@media(max-width:460px){.phone{width:350px;height:760px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important}}
