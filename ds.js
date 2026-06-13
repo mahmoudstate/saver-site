@@ -77,7 +77,7 @@ function svg(inner,sz){return `<svg width="${sz}" height="${sz}" viewBox="0 0 24
 function ico(name,sz){return svg(ICONS[name]||"",sz||20);}
 
 /* currency — auto by country (locale → currency), Intl formatting */
-const LOCALE_CCY={EG:"EGP",GB:"GBP",US:"USD",SA:"SAR",AE:"AED",DE:"EUR",FR:"EUR",EU:"EUR"};
+const LOCALE_CCY={EG:"EGP",GB:"GBP",US:"USD",SA:"SAR",AE:"AED",KW:"KWD",QA:"QAR",DE:"EUR",FR:"EUR",EU:"EUR"};
 function currencyFor(country){return LOCALE_CCY[(country||"").toUpperCase()]||"GBP";}
 function fmt(n,ccy,locale){try{return new Intl.NumberFormat(locale||undefined,{style:"currency",currency:ccy||"GBP",minimumFractionDigits:n%1===0?0:2,maximumFractionDigits:2}).format(n);}catch(e){return (ccy||"")+" "+n;}}
 

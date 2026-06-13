@@ -271,7 +271,7 @@ const g=document.getElementById("icogrid");if(g&&window.SaverDS){g.innerHTML=nam
 // bank icons
 const bw=document.getElementById("bankwall");if(bw&&window.SaverDS){const bks=["hsbc","cib","banquemisr","nbe","revolut","monzo","barclays","enbd","qnb","cash","other bank"];bw.innerHTML=bks.map(b=>window.SaverDS.bankIcon(b,48)).join("");}
 // currency samples — flag of the currency's country + formatted amount
-const cw=document.getElementById("ccywall");if(cw&&window.SaverDS){const rows=[["🇪🇬","EGP"],["🇺🇸","USD"],["🇬🇧","GBP"],["🇪🇺","EUR"],["🇸🇦","SAR"],["🇦🇪","AED"]];cw.innerHTML=rows.map(r=>`<div style="display:flex;align-items:center;gap:12px;font-size:14px"><span style="font-size:22px;line-height:1">${r[0]}</span><span class="tnum" style="font-weight:800;margin-left:auto">${window.SaverDS.fmt(2554,r[1])}</span></div>`).join("");}
+const cw=document.getElementById("ccywall");if(cw&&window.SaverDS){const rows=[["🇪🇬","EGP"],["🇺🇸","USD"],["🇬🇧","GBP"],["🇪🇺","EUR"],["🇸🇦","SAR"],["🇦🇪","AED"],["🇰🇼","KWD"],["🇶🇦","QAR"]];cw.innerHTML=rows.map(r=>`<div style="display:flex;align-items:center;gap:12px;font-size:14px"><span style="font-size:22px;line-height:1">${r[0]}</span><span class="tnum" style="font-weight:800;margin-left:auto">${window.SaverDS.fmt(2554,r[1])}</span></div>`).join("");}
 // glyph picker
 const gp=document.getElementById("glyphpick");if(gp&&window.SaverDS){const ks=['coffee','food','transport','shopping','bill','travel'];gp.innerHTML=ks.map((k,i)=>`<span style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:${i===0?'var(--acDim)':'var(--surface2)'};border:1px solid ${i===0?'var(--ac)':'var(--border)'}">${window.SaverDS.catTile(k,28)}</span>`).join("");}
 })();
