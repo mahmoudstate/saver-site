@@ -439,7 +439,7 @@
     <img src="icon.png" alt="" style="width:72px;height:72px;border-radius:20px;box-shadow:0 12px 28px rgba(0,0,0,.25)"/>
     <div style="font-size:30px;font-weight:800;letter-spacing:-1.2px;margin-top:18px">Welcome to Saver</div>
     <div style="font-size:14px;color:var(--heroSub);font-weight:600;margin-top:8px">Clear money, calmly. All on your phone.</div></div></div>
-  <div class="icard r" style="--d:.18s"><span class="circ" style="width:40px;height:40px;border-radius:12px;background:var(--acDim);color:var(--ac)" data-ico="wallet" data-sz="20"></span><div><div class="nm">See everything at a glance</div><div class="mt">Switch Total ⇄ Safe to spend in a tap</div></div></div>
+  <div class="icard r" style="--d:.18s"><span class="circ" style="width:40px;height:40px;border-radius:12px;background:var(--acDim);color:var(--ac)" data-ico="wallet" data-sz="20"></span><div><div class="nm">See everything at a glance</div><div class="mt">Switch between Total and Safe to spend</div></div></div>
   <div class="icard r" style="--d:.23s"><span class="circ" style="width:40px;height:40px;border-radius:12px;background:var(--yellowDim);color:var(--yellow)" data-ico="target" data-sz="20"></span><div><div class="nm">Reach your goals</div><div class="mt">Freeze money — or spend from a goal vault</div></div></div>
   <div class="icard r" style="--d:.28s"><span class="circ" style="width:40px;height:40px;border-radius:12px;background:var(--blueDim);color:var(--blue)" data-ico="shield" data-sz="20"></span><div><div class="nm">Private &amp; offline</div><div class="mt">Your data never leaves the device</div></div></div>
   <div class="cta"><div class="btn btn-primary btn-full">Get started</div></div>
@@ -476,10 +476,13 @@
 
 <!-- 30 TOASTS -->
 <div><div class="phone"><div class="screen" data-nav="home"><div class="content padnav">
-  <div class="hero"><div class="toprow"><div class="grow"></div><div class="hib" data-ico="eye"></div><div class="hib" data-ico="bell"></div></div>
-    <div class="lbl">Total balance</div><div class="big tnum">£2,454</div><div class="sub">Safe to spend £1,830 · Net +£780</div></div>
-  <div class="sectit"><div class="t">Recent</div><div class="m">See all</div></div>
-  <div class="icard"><span data-cat="food"></span><div><div class="nm">Food &amp; Dining</div><div class="mt">HSBC · just now</div></div><div class="amt out tnum">−£100</div></div>
+  <div class="hero"><div class="toprow"><div><div style="font-size:11px;letter-spacing:.05em;text-transform:uppercase;opacity:.72;font-weight:700">Good evening</div><div style="font-size:15px;font-weight:800;margin-top:1px">Mahmoud</div></div><div class="grow"></div><div class="hib" data-ico="eye"></div><div class="hib" data-ico="bell"></div></div>
+    <div style="display:flex;background:rgba(255,255,255,.22);border-radius:15px;padding:4px;gap:4px;margin:10px 0 14px;font-weight:800"><span style="flex:1;text-align:center;padding:10px 0;border-radius:11px;background:#fff;color:#0c1411;font-size:13.5px">Total</span><span style="flex:1;text-align:center;padding:10px 0;border-radius:11px;opacity:.82;font-size:13.5px">Safe to spend</span></div>
+    <div class="big tnum">£2,454</div><div class="sub">Net this month +£780</div></div>
+  <div class="r" style="display:flex;gap:12px;margin:4px 0 0">
+    <div style="flex:1;background:var(--surface);border:var(--cardBorder);border-radius:18px;padding:14px 15px"><div style="font-size:12px;color:var(--faint);font-weight:700;margin-bottom:5px">Income · June</div><div class="tnum" style="font-size:20px;font-weight:800;color:var(--success)">+£1,000</div></div>
+    <div style="flex:1;background:var(--surface);border:var(--cardBorder);border-radius:18px;padding:14px 15px"><div style="font-size:12px;color:var(--faint);font-weight:700;margin-bottom:5px">Spent · June</div><div class="tnum" style="font-size:20px;font-weight:800;color:var(--red)">−£245</div></div>
+  </div>
 </div>
 <div class="toast" style="bottom:212px"><span class="ic" style="background:var(--success)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></span><div><div class="tx">Transaction added</div><div class="ts">−£100 · Food &amp; Dining</div></div></div>
 <div class="toast" style="bottom:152px"><span class="ic" style="background:var(--yellow)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></span><div><div class="tx">Vodafone due in 2 days</div><div class="ts">Tap to pay £12</div></div></div>
@@ -524,7 +527,7 @@
     <div style="width:96px;height:96px;border-radius:32px;background:rgba(255,255,255,.85);display:flex;align-items:center;justify-content:center;box-shadow:0 16px 36px rgba(0,0,0,.18);margin-bottom:22px;position:relative;z-index:1"><svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#0e9f6e" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="m20 6-11 11-5-5"/></svg></div>
     <div style="font-size:26px;font-weight:800;letter-spacing:-.8px;position:relative;z-index:1">Goal reached!</div>
     <div style="font-size:15px;font-weight:700;margin-top:8px;position:relative;z-index:1">Travel fund · £5,000 saved</div>
-    <div style="font-size:13px;color:var(--heroSub);font-weight:600;margin-top:6px;position:relative;z-index:1">The hard part is behind you 🎉</div>
+    <div style="font-size:13px;color:var(--heroSub);font-weight:600;margin-top:6px;position:relative;z-index:1">Time to enjoy your hard work</div>
     <div style="position:absolute;left:24px;right:24px;bottom:30px;z-index:1">
       <button class="btn btn-full" style="background:#fff;color:#0c4f3c;margin-bottom:10px">Archive &amp; release funds</button>
       <button class="btn btn-full" style="background:rgba(255,255,255,.2);color:var(--heroText)">Keep saving</button>
