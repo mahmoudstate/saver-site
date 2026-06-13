@@ -86,13 +86,14 @@ This document is the single source of truth for the **new Saver** project. Keep 
   - [x] Restore `index.html` Foundations **original ordering** (01 Colour · 02 Typography · 02b Arabic · 03 Spacing/Radius/Motion · 04 Iconography · 05 Buttons · 06 Inputs · 07 Data · 08 Hero).
   - [x] **Arabic-font section** restored; **IBM Plex Sans Arabic** locked; `ds.css` adds `:lang(ar),[dir=rtl]` font + RTL rule.
   - [x] **Docs/Constitution tab** restored (Showcase/Docs toggle) rendering `DESIGN.md` via a **tiny inline markdown renderer** (no CDN — works offline). ⚠️ Constitution *content* still reflects the OLD system → update text to new system later (Phase 1/2).
-- **Phase 1 — Lock foundations** ▶️ *in progress*
+- **Phase 1 — Lock foundations** ✅ *done*
   - [x] Update `ds.js catTile()` to **fixed neutral tile + coloured glyph** model (tokens `--catTile`/`--catTileBorder`); propagated to all screens.
   - [x] **Calm accent palette** locked (dark+light verified): **mint · sage · ocean · lavender · rose · honey**. Rose = soft pink (`#F1AECB`/`#C25480`) chosen to appeal to female users while staying calm. Updated `ds.js ACCENTS` + pills in index/brand + screen 24 swatches.
-  - [x] **Bank icons** system: `SaverDS.bankIcon(name,sz)` — monogram on brand colour, neutral fallback for unknown. Seed set: HSBC, CIB, Banque Misr, NBE, Revolut, Monzo, Barclays, Lloyds, ENBD, QNB, N26, Cash. Shown in Foundations §04. *(pending: confirm/extend the bank list per market — UK/EG/Gulf/EU)*
-  - [ ] Semantic colour usage rules (in/out/warning) documented.
-  - [ ] **i18n/RTL scaffolding** (CSS logical props; Arabic font wired) + **currency tokens** (auto-by-locale, `fmt`).
-  - [ ] **Native-readiness** tokens (safe-area insets, status bar, nav heights).
+  - [x] **Bank icons** system: `SaverDS.bankIcon(name,sz)` — monogram on brand colour, neutral fallback. Seed set shown in Foundations §04. 🔶 **DEFERRED (per user): banks & companies list to be reviewed later** — revisit the full set/branding then.
+  - [x] **Semantic colour** legend documented in Foundations §01 (in=success · out=red · warning=yellow · info=blue · accent=primary).
+  - [x] **i18n/RTL + currency**: `SaverDS.fmt`/`currencyFor` (auto-by-country), Foundations §04b shows EGP/USD/GBP/EUR/SAR/AED with country flags + an English-LTR vs Arabic-RTL row (IBM Plex Sans Arabic). `ds.css` has `:lang(ar)/[dir=rtl]`. *(full component RTL mirroring via logical props lands with the coded app.)*
+  - [x] **Native-readiness**: `--safe-top/-bottom/-left/-right` tokens (env safe-area) + platform note in §04b. *(applied to app shell/nav in the coded app stage.)*
+  - 🔶 *Constitution (DESIGN.md) text still describes the OLD system — update to new system in Phase 2.*
 - **Phase 2 — Component library completeness** ⏳
   - [ ] Inventory & document every component (anatomy/variants/states), including missing: **bank icon, toggle/switch, segmented tabs, pickers (account/category/date/colour/glyph), amount keypad, sparkline/bar/donut charts, sliders, calendar/month picker, search field, list section headers, badges, stepper, snackbar/toast (done), dialog (done), bottom sheet (done), empty (done), skeleton/loading, paywall card**.
 - **Phase 3 — Full screen map** ⏳

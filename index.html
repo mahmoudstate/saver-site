@@ -77,7 +77,15 @@
     <div class="sw-row"><div class="swatch" style="background:var(--success)"></div><div><div class="nm">success</div><div class="vl">--success</div></div></div>
     <div class="sw-row"><div class="swatch" style="background:var(--heroGrad)"></div><div><div class="nm">hero</div><div class="vl">--heroGrad</div></div></div>
   </div>
-  <div style="margin-top:22px"><div class="over">Accents — tap up top to switch (calm set under review)</div>
+  <div style="margin-top:22px"><div class="over">Semantic meaning</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap">
+      <span class="pill" style="background:color-mix(in srgb,var(--success) 14%,transparent);color:var(--success)">in · income</span>
+      <span class="pill pill-red">out · expense</span>
+      <span class="pill pill-yellow">warning · due</span>
+      <span class="pill" style="background:var(--blueDim);color:var(--blue)">info</span>
+      <span class="pill">accent · primary</span>
+    </div></div>
+  <div style="margin-top:22px"><div class="over">Accents — tap up top to switch</div>
     <div style="display:flex;gap:12px;flex-wrap:wrap">
       <span class="pill" style="background:#0D9488;color:#fff">mint</span><span class="pill" style="background:#3F8C63;color:#fff">sage</span><span class="pill" style="background:#3E72B0;color:#fff">ocean</span><span class="pill" style="background:#6E5AB8;color:#fff">lavender</span><span class="pill" style="background:#C25480;color:#fff">rose</span><span class="pill" style="background:#8A6A2E;color:#fff">honey</span>
     </div></div>
@@ -139,6 +147,23 @@
   </div>
   <div class="over" style="margin-top:22px">Bank &amp; account icons — monogram on brand colour (generic = neutral)</div>
   <div style="display:flex;gap:14px;flex-wrap:wrap" id="bankwall"></div>
+</section>
+
+<!-- 04b CURRENCY / LOCALE / PLATFORM -->
+<section class="section reveal"><div class="sec-h">Foundations · 04b</div><div class="sec-t">Currency, locale &amp; platform</div>
+  <p class="sec-d">Built for UK · Egypt · Gulf · Europe. Currency follows the user's country; the app is bilingual (English + العربية, RTL-ready) and packaged native (App Store / Google Play) with safe-area awareness.</p>
+  <div class="grid g3">
+    <div class="card"><div class="over">Currency · auto by country</div><div id="ccywall" style="display:flex;flex-direction:column;gap:10px"></div></div>
+    <div class="card"><div class="over">Locale &amp; direction</div>
+      <div class="icard" style="margin-bottom:10px"><span data-cat="salary" data-csz="40"></span><div><div class="nm">Available</div><div class="mt">English · LTR</div></div><div class="amt in tnum">£1,930</div></div>
+      <div class="icard" dir="rtl"><span data-cat="salary" data-csz="40"></span><div><div class="nm">المتاح</div><div class="mt">العربية · RTL</div></div><div class="amt in tnum">+£1,930</div></div>
+      <p class="caption" style="margin-top:10px">الخط: IBM Plex Sans Arabic · يتطابق مع DM Sans في اللاتيني.</p>
+    </div>
+    <div class="card"><div class="over">Platform · native-ready</div>
+      <p class="caption" style="line-height:1.7">Safe-area tokens <code>--safe-top/-bottom</code> keep content clear of notches &amp; home bars. Touch targets ≥44px. Ships via React + Capacitor to iOS &amp; Android; tested on web first.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><span class="chip">iOS</span><span class="chip">Android</span><span class="chip">Web / PWA</span><span class="chip">Offline</span></div>
+    </div>
+  </div>
 </section>
 
 <!-- 05 BUTTONS & PILLS -->
@@ -245,6 +270,8 @@ function mdToHtml(md){
 const g=document.getElementById("icogrid");if(g&&window.SaverDS){g.innerHTML=names.map(n=>`<div class="icocell"><span class="ig" data-n="${n}"></span><span class="lab">${n}</span></div>`).join("");g.querySelectorAll('.ig').forEach(e=>e.innerHTML=window.SaverDS.ico(e.dataset.n,22));}
 // bank icons
 const bw=document.getElementById("bankwall");if(bw&&window.SaverDS){const bks=["hsbc","cib","banquemisr","nbe","revolut","monzo","barclays","enbd","qnb","cash","other bank"];bw.innerHTML=bks.map(b=>window.SaverDS.bankIcon(b,48)).join("");}
+// currency samples — flag of the currency's country + formatted amount
+const cw=document.getElementById("ccywall");if(cw&&window.SaverDS){const rows=[["🇪🇬","EGP"],["🇺🇸","USD"],["🇬🇧","GBP"],["🇪🇺","EUR"],["🇸🇦","SAR"],["🇦🇪","AED"]];cw.innerHTML=rows.map(r=>`<div style="display:flex;align-items:center;gap:12px;font-size:14px"><span style="font-size:22px;line-height:1">${r[0]}</span><span class="tnum" style="font-weight:800;margin-left:auto">${window.SaverDS.fmt(2554,r[1])}</span></div>`).join("");}
 // glyph picker
 const gp=document.getElementById("glyphpick");if(gp&&window.SaverDS){const ks=['coffee','food','transport','shopping','bill','travel'];gp.innerHTML=ks.map((k,i)=>`<span style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:${i===0?'var(--acDim)':'var(--surface2)'};border:1px solid ${i===0?'var(--ac)':'var(--border)'}">${window.SaverDS.catTile(k,28)}</span>`).join("");}
 })();

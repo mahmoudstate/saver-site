@@ -76,6 +76,11 @@ const ICONS={
 function svg(inner,sz){return `<svg width="${sz}" height="${sz}" viewBox="0 0 24 24">${inner}</svg>`;}
 function ico(name,sz){return svg(ICONS[name]||"",sz||20);}
 
+/* currency — auto by country (locale → currency), Intl formatting */
+const LOCALE_CCY={EG:"EGP",GB:"GBP",US:"USD",SA:"SAR",AE:"AED",DE:"EUR",FR:"EUR",EU:"EUR"};
+function currencyFor(country){return LOCALE_CCY[(country||"").toUpperCase()]||"GBP";}
+function fmt(n,ccy,locale){try{return new Intl.NumberFormat(locale||undefined,{style:"currency",currency:ccy||"GBP",minimumFractionDigits:n%1===0?0:2,maximumFractionDigits:2}).format(n);}catch(e){return (ccy||"")+" "+n;}}
+
 /* ---- category tiles (colored circle + white glyph) ---- */
 /* category glyphs use currentColor (model: fixed neutral tile + COLOURED glyph) */
 const W='stroke="currentColor" stroke-width="2.1" fill="none" stroke-linecap="round" stroke-linejoin="round"';
@@ -136,5 +141,5 @@ function init(){
   mountControls();mountReveal();
 }
 if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
-window.SaverDS={ico,catTile,bankIcon,setTheme,setAccent};
+window.SaverDS={ico,catTile,bankIcon,fmt,currencyFor,setTheme,setAccent};
 })();
