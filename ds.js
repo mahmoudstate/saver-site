@@ -7,12 +7,12 @@ const root=document.documentElement;
 
 /* ---- accents (mint default) ---- */
 const ACCENTS={
-  mint:   {dark:"#5FE3C0",light:"#0D9488",onDark:"#06251F",onLight:"#fff"},
-  emerald:{dark:"#34D399",light:"#059669",onDark:"#04231A",onLight:"#fff"},
-  blue:   {dark:"#60A5FA",light:"#2563EB",onDark:"#04183A",onLight:"#fff"},
-  violet: {dark:"#A78BFA",light:"#7C3AED",onDark:"#1A1040",onLight:"#fff"},
-  coral:  {dark:"#FB7185",light:"#E11D57",onDark:"#3A0512",onLight:"#fff"},
-  amber:  {dark:"#FBBF24",light:"#D97706",onDark:"#2A1A00",onLight:"#fff"}
+  mint:    {dark:"#5FE3C0",light:"#0D9488",onDark:"#06251F",onLight:"#fff"},
+  sage:    {dark:"#93CFA8",light:"#3F8C63",onDark:"#082018",onLight:"#fff"},
+  ocean:   {dark:"#86B5E6",light:"#3E72B0",onDark:"#06182E",onLight:"#fff"},
+  lavender:{dark:"#C0A9E6",light:"#6E5AB8",onDark:"#1A1040",onLight:"#fff"},
+  rose:    {dark:"#F1AECB",light:"#C25480",onDark:"#3A0E20",onLight:"#fff"},
+  honey:   {dark:"#E6C98A",light:"#8A6A2E",onDark:"#241A06",onLight:"#fff"}
 };
 let accent=localStorage.getItem("ds-accent")||"mint";
 let theme=localStorage.getItem("ds-theme")||root.getAttribute("data-theme")||"dark";
