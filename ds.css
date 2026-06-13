@@ -270,6 +270,22 @@ header.lead{padding:48px 0 6px}
 .paywall{border-radius:var(--r-2xl);padding:24px;background:var(--heroGrad);color:var(--heroText);position:relative;overflow:hidden}
 .paywall::after{content:"";position:absolute;right:-40px;top:-50px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.16)}
 .paywall .feat{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;margin:8px 0;position:relative;z-index:1}
+/* top tabs (underline) */
+.tabs{display:flex;gap:22px;border-bottom:1px solid var(--border)}
+.tabs button{border:none;background:none;font-family:inherit;font-weight:700;font-size:14px;color:var(--muted);padding:10px 0;cursor:pointer;position:relative}
+.tabs button.on{color:var(--text)}
+.tabs button.on::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2.5px;border-radius:2px;background:var(--ac)}
+/* avatars */
+.avatar{border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--onacc);background:linear-gradient(135deg,var(--ac),var(--ac2));flex-shrink:0;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.avstack{display:flex}.avstack .avatar{border:2px solid var(--surface)}.avstack .avatar+.avatar{margin-left:-12px}
+/* coachmark / tooltip */
+.coach{position:relative;background:var(--surface);border:var(--cardBorder);box-shadow:var(--elev);border-radius:14px;padding:14px 16px;max-width:250px}
+.coach::after{content:"";position:absolute;top:-8px;left:28px;width:14px;height:14px;background:var(--surface);border-left:var(--cardBorder);border-top:var(--cardBorder);transform:rotate(45deg)}
+.tip{display:inline-block;background:var(--text);color:var(--bg);font-size:12.5px;font-weight:700;padding:8px 12px;border-radius:10px}
+/* list section header + divider */
+.lsh{display:flex;align-items:center;justify-content:space-between;padding:6px 2px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--faint)}
+.divider{height:1px;background:var(--border);margin:10px 0}
 
 /* ---------- 17. MOTION KEYFRAMES ---------- */
 @keyframes up{to{opacity:1;transform:none}}
