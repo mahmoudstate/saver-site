@@ -87,3 +87,16 @@ All messages are **centre modals**, not bottom toasts:
 - **ConfirmModal**: title + message + Cancel / Confirm(coloured).
 - **GoalToast**: centred celebratory card, icon tile + message + "Keep Going!".
 No emoji anywhere — icons come from our `Ico` set.
+
+## 7. Input validation rule (apply app-wide)
+**Principle:** every constrained field shows (a) a quiet helper line of what's expected, and (b) a clear friendly inline error under the field when wrong. The submit button stays tappable — tapping with an invalid field reveals the error and scrolls to it. **Never a dead button with no reason.** Prefer constrained controls (steppers, day picker) so bad input is hard to type.
+
+Per-field constraints (from old app — LOCKED):
+- **Amount / target / limit / installment amount** · money, > 0 · helper "Amount in £, above 0" · error "Pop in an amount above £0."
+- **Total payments (count)** · integer ≥ 1 · helper "Number of payments — not money (e.g. 12)."
+- **Already-paid payments (count)** · integer 0…total · helper "Number of payments — not money." · error "This plan only has {c} payments — enter {c} or fewer."
+- **Due day** · day of month **1–28** (stepper/picker; safe for every month) · helper "Day of the month · 1–28."
+- **Reminder days before** · 0–7 (stepper) · helper "Days before · 0–7."
+- **Name (account/category/goal/bill)** · required · error "Give it a name so you can spot it later."
+- **Transfer destination** · must differ from source · error "Same account, really? Pick a different one."
+Tone: friendly/playful but always clear about the unit and the fix. No emoji — use our icons.
