@@ -141,9 +141,11 @@ txn(type: expense|income|saving|transfer|goal_withdraw|goal_return) · bank(lowB
 
 ---
 
-## 10. NEW NUMBERED SCREENS TO ADD (proposed 34→…)
-34 Add·Transfer · 35 Income/Expense Breakdown · 36 Budgets·Projects · 37 Project detail · 38 Project editor · 39 Installment detail · 40 Installment add (wizard) · 41 Subscription picker · 42 Subscription detail · 43 Settings·Accounts list · 44 Settings·Categories list · 45 Backup & Restore · 46 Help/FAQ (full) · 47 Story Tour · 48 Coach Tour overlay · 49 PWA Install sheet · 50 Bills view-selector states.
-*(Exact set depends on §9 decisions.)*
+## 10. NEW NUMBERED SCREENS (building)
+**Built ✅ (batch G):** 34 Add·Transfer · 35 Breakdown · 36 Budgets·Projects · 37 Installment detail · 38 Subscription picker · 39 Backup & Restore.
+**Next ➕:** 40 Installment add (3-step wizard) · 41 Subscription form · 42 Project detail/editor · 43 Settings·Accounts list · 44 Settings·Categories list · 45 Help/FAQ (full) · 46 Story Tour (60-sec) · 47 Coach Tour overlay · 48 PWA Install sheet · 49 Bills view-selector states · 50 Return-to-Bank / Spending-mode (goal detail extend).
+
+**Default decisions taken (reversible, per "continue"):** nav kept as Home·Activity·Budget·You for now (§0 still open); Transfer + Projects **included**; legacy Groups → folding into Budgets (kept [14] as reference). Adjust anytime.
 
 ---
 _Generated Phase 3 · 2026-06-13 · review & lock with the user, then expand `screens.html`._
