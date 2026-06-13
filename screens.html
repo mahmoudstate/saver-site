@@ -378,7 +378,7 @@
 
 <!-- 23 SETTINGS -->
 <div><div class="phone"><div class="screen" data-nav="you"><div class="content padnav">
-  <div class="hero"><div class="toprow"><div class="ttl">Settings</div><div class="grow"></div><div class="hib" data-ico="search"></div></div>
+  <div class="hero"><div class="toprow"><div class="ttl">Profile</div><div class="grow"></div><div class="hib" data-ico="search"></div></div>
     <div style="display:flex;align-items:center;gap:14px;position:relative;z-index:1">
       <div style="width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:21px;color:var(--heroText)">M</div>
       <div><div style="font-size:19px;font-weight:800;letter-spacing:-.3px">Mahmoud</div><div style="font-size:12.5px;color:var(--heroSub);font-weight:600">Free plan · member since 2024</div></div></div></div>
@@ -389,7 +389,7 @@
   <div class="over r" style="--d:.28s">App</div>
   <div class="icard r" style="--d:.32s"><span class="circ" style="width:36px;height:36px;border-radius:11px;background:var(--acDim);color:var(--ac)" data-ico="palette" data-sz="19"></span><div class="nm">Appearance</div><div style="margin-left:auto;display:flex;align-items:center;gap:8px;color:var(--faint)"><span style="font-size:12.5px;color:var(--muted);font-weight:700">Mint · Dark</span><span data-ico="chev" data-sz="18"></span></div></div>
   <div class="icard r" style="--d:.35s"><span class="circ" style="width:36px;height:36px;border-radius:11px;background:var(--blueDim);color:var(--blue)" data-ico="shield" data-sz="19"></span><div class="nm">Privacy &amp; backup</div><span style="margin-left:auto;color:var(--faint)" data-ico="chev" data-sz="18"></span></div>
-</div></div></div><div class="cap"><span class="no">23</span><b>Settings</b><span>Profile · money · app</span></div></div>
+</div></div></div><div class="cap"><span class="no">23</span><b>Profile</b><span>Account · money · app</span></div></div>
 
 <!-- 24 APPEARANCE (THEME & ACCENT) -->
 <div><div class="phone"><div class="screen" data-nav="none"><div class="content">
@@ -653,8 +653,21 @@
 </div>
 </div></div><div class="cap"><span class="no">43</span><b>Source picker</b><span>Vault shows only in spending mode</span></div></div>
 
+<!-- 44 BILLS · VIEW SELECTOR (History) -->
+<div><div class="phone"><div class="screen" data-nav="bills"><div class="content padnav">
+  <div class="hero"><div class="toprow"><div class="ttl">Bills</div><div class="grow"></div><div class="hib" data-ico="plus"></div></div>
+    <div class="lbl">Paid this year</div><div class="big tnum" data-count="336" data-prefix="£">£336</div><div class="sub">14 payments &nbsp;·&nbsp; all on time</div></div>
+  <div class="seg r" style="--d:.14s"><b>Timeline</b><b>Categories</b><b class="on">History</b></div>
+  <div class="over r" style="--d:.2s">June</div>
+  <div class="icard r" style="--d:.24s"><span class="circ" style="width:42px;height:42px;border-radius:13px;background:#E50914;font-weight:800;font-size:15px">N</span><div><div class="nm">Netflix</div><div class="mt">Subscription · Jun 1</div></div><div class="amt out tnum">−£10</div></div>
+  <div class="icard r" style="--d:.28s"><span class="circ" style="width:42px;height:42px;border-radius:13px;background:#1DB954;font-weight:800;font-size:15px">S</span><div><div class="nm">Spotify</div><div class="mt">Subscription · Jun 1</div></div><div class="amt out tnum">−£6</div></div>
+  <div class="over r" style="--d:.32s">May</div>
+  <div class="icard r" style="--d:.36s"><span data-cat="bill"></span><div><div class="nm">Utilities</div><div class="mt">Bill · May 28</div></div><div class="amt out tnum">−£10</div></div>
+  <div class="icard r" style="--d:.4s"><span data-cat="phone"></span><div><div class="nm">Phone plan</div><div class="mt">Installment 3 / 12 · May 15</div></div><div class="amt out tnum">−£25</div></div>
+</div></div></div><div class="cap"><span class="no">44</span><b>Bills · History</b><span>Timeline / Categories / History</span></div></div>
+
 </div></main>
-<footer class="foot"><div class="wrap">43 screens (Phase 3 — core v1 in progress) · built on ds.css · light, dark, any accent. Powered by Mahmoud © 2026</div></footer>
+<footer class="foot"><div class="wrap">44 screens (Phase 3 — core v1 in progress) · built on ds.css · light, dark, any accent. Powered by Mahmoud © 2026</div></footer>
 <script>/* glyph/colour picker for screen 18 */window.addEventListener('load',()=>{const g=document.getElementById('glyphpick');if(g&&window.SaverDS){const ks=['coffee','food','transport','shopping','bill','travel'];g.innerHTML=ks.map((k,i)=>`<span style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:${i===0?'var(--acDim)':'var(--surface2)'};border:1px solid ${i===0?'var(--ac)':'var(--border)'}">${window.SaverDS.catTile(k,28)}</span>`).join('');}});</script>
 <script src="ds.js"></script>
 </body></html>

@@ -141,7 +141,7 @@ txn(type: expense|income|saving|transfer|goal_withdraw|goal_return) · bank(lowB
 ---
 
 ## 10. NEW NUMBERED SCREENS (building)
-**Built ✅:** 34 Add·Transfer · 35 Breakdown · 36 Budgets·Projects · 37 Installment detail · 38 Subscription picker · 39 Backup & Restore · 40 Settings·Accounts · 41 Settings·Categories · 42 Project detail. Nav reworked: Bills = tab; Budgets/Goals = pushed.
+**Built ✅:** 34 Add·Transfer · 35 Breakdown · 36 Budgets·Projects · 37 Installment detail · 38 Subscription picker · 39 Backup & Restore · 40 Settings·Accounts · 41 Settings·Categories · 42 Project detail · 43 Source picker (vault only in spending mode) · 44 Bills·History (view-selector). Nav reworked: Bills = tab; Budgets/Goals = pushed. **Profile tab = screen 23.** Home: Total/Safe toggle, no Recent (→ Activity), Goals card. Goal detail: Return-to-bank + Spending-mode + per-bank frozen.
 **Next ➕ (core v1):** Profile screen (or reuse Settings) · Account/Category editors polish · Home enrichment (greeting, balance-mode, Overview cards, Bills/Installments cards, onboarding checklist) · Return-to-Bank + Spending-mode on goal detail · Bills view-selector (Timeline/Categories/History).
 **Deferred to LAST (per user — finalise with latest content):** 🕗 Onboarding/Guide · Story Tour (60-sec) · Coach Tour · Help/Manual + FAQ · PWA install help.
 
