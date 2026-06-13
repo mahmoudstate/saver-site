@@ -89,7 +89,7 @@ This document is the single source of truth for the **new Saver** project. Keep 
 - **Phase 1 — Lock foundations** ▶️ *in progress*
   - [x] Update `ds.js catTile()` to **fixed neutral tile + coloured glyph** model (tokens `--catTile`/`--catTileBorder`); propagated to all screens.
   - [x] **Calm accent palette** locked (dark+light verified): **mint · sage · ocean · lavender · rose · honey**. Rose = soft pink (`#F1AECB`/`#C25480`) chosen to appeal to female users while staying calm. Updated `ds.js ACCENTS` + pills in index/brand + screen 24 swatches.
-  - [ ] **Bank icons** system (real bank monograms/brand colours; e.g. HSBC, Banque Misr, NBE, CIB, Revolut, etc.) — define component. *(pending: which banks per market)*
+  - [x] **Bank icons** system: `SaverDS.bankIcon(name,sz)` — monogram on brand colour, neutral fallback for unknown. Seed set: HSBC, CIB, Banque Misr, NBE, Revolut, Monzo, Barclays, Lloyds, ENBD, QNB, N26, Cash. Shown in Foundations §04. *(pending: confirm/extend the bank list per market — UK/EG/Gulf/EU)*
   - [ ] Semantic colour usage rules (in/out/warning) documented.
   - [ ] **i18n/RTL scaffolding** (CSS logical props; Arabic font wired) + **currency tokens** (auto-by-locale, `fmt`).
   - [ ] **Native-readiness** tokens (safe-area insets, status bar, nav heights).

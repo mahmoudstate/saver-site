@@ -133,10 +133,12 @@
 <section class="section reveal"><div class="sec-h">Foundations · 04</div><div class="sec-t">Iconography</div>
   <p class="sec-d">One drawn set — Lucide-style, 2px stroke, 24 grid. No emoji in UI chrome. Category tiles use a <strong>fixed neutral tile + coloured glyph</strong> (model locked; rollout in progress).</p>
   <div class="icogrid" id="icogrid"></div>
-  <div class="over" style="margin-top:22px">Category tiles</div>
+  <div class="over" style="margin-top:22px">Category tiles — fixed neutral tile + coloured glyph</div>
   <div style="display:flex;gap:14px;flex-wrap:wrap">
     <span data-cat="food" data-csz="48"></span><span data-cat="coffee" data-csz="48"></span><span data-cat="salary" data-csz="48"></span><span data-cat="shopping" data-csz="48"></span><span data-cat="transport" data-csz="48"></span><span data-cat="bill" data-csz="48"></span><span data-cat="travel" data-csz="48"></span><span data-cat="phone" data-csz="48"></span><span data-cat="home" data-csz="48"></span>
   </div>
+  <div class="over" style="margin-top:22px">Bank &amp; account icons — monogram on brand colour (generic = neutral)</div>
+  <div style="display:flex;gap:14px;flex-wrap:wrap" id="bankwall"></div>
 </section>
 
 <!-- 05 BUTTONS & PILLS -->
@@ -241,6 +243,8 @@ function mdToHtml(md){
 // icon grid
 (function(){const names=["home","activity","budget","you","plus","search","bell","eye","cal","check","close","chev","back","note","lock","wallet","zap","card","target","layers","shield","sparkles","palette","book","download","trash","grip","pencil","sun","moon"];
 const g=document.getElementById("icogrid");if(g&&window.SaverDS){g.innerHTML=names.map(n=>`<div class="icocell"><span class="ig" data-n="${n}"></span><span class="lab">${n}</span></div>`).join("");g.querySelectorAll('.ig').forEach(e=>e.innerHTML=window.SaverDS.ico(e.dataset.n,22));}
+// bank icons
+const bw=document.getElementById("bankwall");if(bw&&window.SaverDS){const bks=["hsbc","cib","banquemisr","nbe","revolut","monzo","barclays","enbd","qnb","cash","other bank"];bw.innerHTML=bks.map(b=>window.SaverDS.bankIcon(b,48)).join("");}
 // glyph picker
 const gp=document.getElementById("glyphpick");if(gp&&window.SaverDS){const ks=['coffee','food','transport','shopping','bill','travel'];gp.innerHTML=ks.map((k,i)=>`<span style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:${i===0?'var(--acDim)':'var(--surface2)'};border:1px solid ${i===0?'var(--ac)':'var(--border)'}">${window.SaverDS.catTile(k,28)}</span>`).join("");}
 })();

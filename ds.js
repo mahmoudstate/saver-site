@@ -93,6 +93,18 @@ const CATS={
 // fixed neutral tile + coloured glyph (icon-colour model, locked)
 function catTile(name,sz){const c=CATS[name]||["#888",""];return `<span class="circ" style="width:${sz}px;height:${sz}px;border-radius:14px;background:var(--catTile);border:1px solid var(--catTileBorder);color:${c[0]}">${svg(c[1],Math.round(sz*0.56))}</span>`;}
 
+/* bank / account icons — monogram on the bank's brand colour (generic = neutral tile) */
+const BANKS={
+ hsbc:["#DB0011","HSBC"], cib:["#7A1F3D","CIB"], banquemisr:["#C8102E","Misr"], nbe:["#00833E","NBE"],
+ revolut:["#0A1B2A","R"], monzo:["#FF3464","monzo"], barclays:["#1CA3DE","B"], lloyds:["#024731","Lloyds"],
+ enbd:["#C8102E","ENBD"], qnb:["#7B1E3B","QNB"], n26:["#1A1A1A","N26"], cash:["#0E9F6E","Cash"]
+};
+function bankIcon(name,sz){const k=(name||'').toLowerCase().replace(/[^a-z]/g,'');const b=BANKS[k];const color=b?b[0]:null;const mono=b?b[1]:(name||'?').slice(0,1).toUpperCase();
+ const fs=Math.max(9,Math.round(sz*(mono.length>3?0.26:mono.length>1?0.40:0.44)));
+ const base=`width:${sz}px;height:${sz}px;border-radius:14px;font-weight:800;font-size:${fs}px;letter-spacing:-.3px`;
+ if(color)return `<span class="circ" style="${base};background:${color};color:#fff">${mono}</span>`;
+ return `<span class="circ" style="${base};background:var(--catTile);border:1px solid var(--catTileBorder);color:var(--muted)">${mono}</span>`;}
+
 /* ---- phone chrome ---- */
 function navHTML(active){const items=["home","activity","budget","you"];
   return '<div class="nav">'+items.map(it=>`<div class="it ${active===it?'on':''}">${ico(it,22)}</div>`).join('')+'</div>';}
@@ -124,5 +136,5 @@ function init(){
   mountControls();mountReveal();
 }
 if(document.readyState!=='loading')init();else document.addEventListener('DOMContentLoaded',init);
-window.SaverDS={ico,catTile,setTheme,setAccent};
+window.SaverDS={ico,catTile,bankIcon,setTheme,setAccent};
 })();
