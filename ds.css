@@ -222,6 +222,55 @@ header.lead{padding:48px 0 6px}
 /* ---------- 16. ADD (sticky cta) ---------- */
 .cta{position:absolute;left:20px;right:20px;bottom:24px}
 
+/* ---------- 18. PHASE-2 COMPONENTS ---------- */
+/* switch / toggle */
+.switch{width:46px;height:27px;border-radius:var(--r-pill);background:var(--track);position:relative;cursor:pointer;flex-shrink:0;transition:background .2s;border:none;padding:0}
+.switch i{position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:left .2s}
+.switch.on{background:var(--ac)} .switch.on i{left:22px}
+/* badge */
+.badge{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 5px;border-radius:var(--r-pill);background:var(--red);color:#fff;font-size:10.5px;font-weight:800;font-variant-numeric:tabular-nums}
+.badge-ac{background:var(--ac);color:var(--onacc)}
+/* stepper */
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--border);border-radius:13px;overflow:hidden;background:var(--surface)}
+.stepper button{width:42px;height:42px;border:none;background:transparent;color:var(--text);font-size:20px;font-weight:700;cursor:pointer}
+.stepper button:active{background:var(--acDim);color:var(--ac)}
+.stepper .val{min-width:52px;text-align:center;font-weight:800;font-variant-numeric:tabular-nums}
+/* slider */
+.slider{height:6px;border-radius:var(--r-pill);background:var(--track);position:relative;margin:16px 10px}
+.slider .fill{height:100%;border-radius:var(--r-pill);background:var(--ac)}
+.slider .thumb{position:absolute;top:50%;transform:translate(-50%,-50%);width:22px;height:22px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.28);border:2px solid var(--ac)}
+/* search */
+.search{display:flex;align-items:center;gap:10px;background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:12px 14px;color:var(--muted)}
+.search input{border:none;background:none;outline:none;color:var(--text);font-family:inherit;font-size:14px;flex:1;min-width:0}
+.search input::placeholder{color:var(--faint)}
+/* skeleton */
+@keyframes shimmer{0%{background-position:-260px 0}100%{background-position:260px 0}}
+.skel{border-radius:8px;background:linear-gradient(90deg,var(--track) 25%,color-mix(in srgb,var(--track) 55%,var(--surface)) 50%,var(--track) 75%);background-size:520px 100%;animation:shimmer 1.3s infinite linear}
+/* amount keypad */
+.kbd{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kbd button{height:54px;border:none;background:var(--surface2);border-radius:14px;font-family:inherit;font-size:20px;font-weight:700;color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center}
+.kbd button:active{background:var(--acDim);color:var(--ac)}
+/* calendar (date picker) */
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-head .mo{font-weight:800;font-size:14px}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal-grid .dow{color:var(--faint);font-size:10.5px;font-weight:700;padding-bottom:4px}
+.cal-grid .d{height:34px;display:flex;align-items:center;justify-content:center;border-radius:9px;font-size:13px;font-weight:600;color:var(--text)}
+.cal-grid .d.mut{color:var(--faint)} .cal-grid .d.sel{background:var(--ac);color:var(--onacc);font-weight:800}
+.cal-grid .d.today{box-shadow:inset 0 0 0 1.5px var(--ac);color:var(--ac)}
+/* month strip */
+.monthstrip{display:flex;gap:8px;overflow:auto;padding-bottom:2px}
+.monthstrip .m{padding:8px 14px;border-radius:var(--r-pill);background:var(--surface2);border:1px solid var(--border);font-weight:700;font-size:13px;color:var(--muted);white-space:nowrap;cursor:pointer}
+.monthstrip .m.on{background:var(--acDim);color:var(--ac);border-color:transparent}
+/* sparkline / bars */
+.bars{display:flex;align-items:flex-end;gap:6px;height:60px}
+.bars i{flex:1;background:var(--track);border-radius:5px}
+.bars i.hi{background:var(--ac)}
+/* paywall */
+.paywall{border-radius:var(--r-2xl);padding:24px;background:var(--heroGrad);color:var(--heroText);position:relative;overflow:hidden}
+.paywall::after{content:"";position:absolute;right:-40px;top:-50px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.16)}
+.paywall .feat{display:flex;align-items:center;gap:10px;font-weight:600;font-size:14px;margin:8px 0;position:relative;z-index:1}
+
 /* ---------- 17. MOTION KEYFRAMES ---------- */
 @keyframes up{to{opacity:1;transform:none}}
 .reveal,.r{opacity:0;transform:translateY(16px);animation:up .6s var(--e-out) forwards;animation-delay:var(--d,0s)}

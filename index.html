@@ -236,6 +236,69 @@
   <p style="text-align:center;margin-top:20px"><a href="screens.html" class="btn btn-primary" style="text-decoration:none">See all 33 screens <span data-ico="chev" data-sz="17"></span></a></p>
 </section>
 
+<!-- 09 CONTROLS -->
+<section class="section reveal"><div class="sec-h">Components · 09</div><div class="sec-t">Switches, search &amp; controls</div>
+  <p class="sec-d">Toggles, search, steppers, sliders and badges — small interactive parts that share the accent and tokens.</p>
+  <div class="grid g2">
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px"><span class="title">App lock</span><button class="switch on" aria-label="on"><i></i></button></div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px"><span class="title">Hide balance</span><button class="switch" aria-label="off"><i></i></button></div>
+      <div class="search"><span data-ico="search" data-sz="18"></span><input placeholder="Search transactions…"/></div>
+    </div>
+    <div class="card">
+      <div class="over">Stepper</div>
+      <div class="stepper" style="margin-bottom:18px"><button>−</button><span class="val">12</span><button>+</button></div>
+      <div class="over">Slider · monthly budget</div>
+      <div class="slider"><div class="fill" style="width:62%"></div><div class="thumb" style="left:62%"></div></div>
+      <div class="over" style="margin-top:16px">Badges</div>
+      <div style="display:flex;gap:10px;align-items:center"><span class="badge">3</span><span class="badge badge-ac">New</span><span class="pill pill-yellow">Due</span><span class="pill pill-green">Paid</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 PICKERS -->
+<section class="section reveal"><div class="sec-h">Components · 10</div><div class="sec-t">Pickers</div>
+  <p class="sec-d">Date, month and amount entry — the inputs behind Add, Bills and reports.</p>
+  <div class="grid g3">
+    <div class="card"><div class="cal-head"><span data-ico="back" data-sz="18" style="color:var(--muted)"></span><span class="mo">June 2026</span><span data-ico="chev" data-sz="18" style="color:var(--muted)"></span></div><div class="cal-grid" id="calgrid"></div></div>
+    <div class="card"><div class="over">Month</div><div class="monthstrip" id="mstrip"></div><div class="over" style="margin-top:18px">Quick ranges</div><div style="display:flex;gap:8px;flex-wrap:wrap"><span class="chip">This month</span><span class="chip">Last 30d</span><span class="chip">This year</span></div></div>
+    <div class="card"><div class="over">Amount</div><div class="display tnum" style="text-align:center;font-size:34px;margin:4px 0 14px">−£100</div><div class="kbd" id="kbd"></div></div>
+  </div>
+</section>
+
+<!-- 11 CHARTS & LOADING -->
+<section class="section reveal"><div class="sec-h">Components · 11</div><div class="sec-t">Charts &amp; loading</div>
+  <p class="sec-d">Lightweight data viz and graceful loading states — all themed.</p>
+  <div class="grid g3">
+    <div class="card"><div class="over">Sparkline · balance</div><svg viewBox="0 0 240 70" width="100%" height="70" preserveAspectRatio="none" style="margin-top:6px"><polyline fill="none" stroke="var(--ac)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="0,55 30,48 60,52 90,34 120,40 150,22 180,28 210,12 240,18"/></svg></div>
+    <div class="card"><div class="over">Bars · this week</div><div class="bars" id="bars"></div></div>
+    <div class="card"><div class="over">Loading</div>
+      <div style="display:flex;align-items:center;gap:13px;margin-top:6px"><div class="skel" style="width:44px;height:44px;border-radius:14px"></div><div style="flex:1"><div class="skel" style="height:13px;width:60%;margin-bottom:8px"></div><div class="skel" style="height:11px;width:40%"></div></div></div>
+      <div style="display:flex;align-items:center;gap:13px;margin-top:16px"><div class="skel" style="width:44px;height:44px;border-radius:14px"></div><div style="flex:1"><div class="skel" style="height:13px;width:70%;margin-bottom:8px"></div><div class="skel" style="height:11px;width:50%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 PREMIUM -->
+<section class="section reveal"><div class="sec-h">Components · 12</div><div class="sec-t">Premium / paywall</div>
+  <p class="sec-d">The upgrade surface for the paid tier — calm, honest, no dark patterns.</p>
+  <div class="grid g2">
+    <div class="paywall">
+      <div class="lbl" style="color:var(--heroSub);position:relative;z-index:1">Saver Premium</div>
+      <div class="big" style="font-size:38px;position:relative;z-index:1">£2.99<span style="font-size:16px;font-weight:700">/mo</span></div>
+      <div class="feat"><span data-ico="check" data-sz="18"></span>Deeper reports &amp; analytics</div>
+      <div class="feat"><span data-ico="check" data-sz="18"></span>Unlimited goals &amp; budgets</div>
+      <div class="feat"><span data-ico="check" data-sz="18"></span>Cloud encrypted backup</div>
+      <button class="btn btn-full" style="background:#fff;color:#0c4f3c;margin-top:16px;position:relative;z-index:1">Start free trial</button>
+    </div>
+    <div class="card">
+      <div class="over">Notes</div>
+      <p class="caption" style="line-height:1.8">Premium is optional — the core app stays fully usable free. The paywall reuses the gradient hero so it tints with the chosen accent. One clear price, one CTA, easy to dismiss.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px"><span class="chip">Monthly</span><span class="chip">Yearly −20%</span><span class="chip">Restore</span></div>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <main class="wrap" id="docs"><div class="doc" id="docbody"><p class="caption">Loading the constitution…</p></div></main>
@@ -272,6 +335,14 @@ const g=document.getElementById("icogrid");if(g&&window.SaverDS){g.innerHTML=nam
 const bw=document.getElementById("bankwall");if(bw&&window.SaverDS){const bks=["hsbc","cib","banquemisr","nbe","revolut","monzo","barclays","enbd","qnb","cash","other bank"];bw.innerHTML=bks.map(b=>window.SaverDS.bankIcon(b,48)).join("");}
 // currency samples — flag of the currency's country + formatted amount
 const cw=document.getElementById("ccywall");if(cw&&window.SaverDS){const rows=[["🇪🇬","EGP"],["🇺🇸","USD"],["🇬🇧","GBP"],["🇪🇺","EUR"],["🇸🇦","SAR"],["🇦🇪","AED"],["🇰🇼","KWD"],["🇶🇦","QAR"]];cw.innerHTML=rows.map(r=>`<div style="display:flex;align-items:center;gap:12px;font-size:14px"><span style="font-size:22px;line-height:1">${r[0]}</span><span class="tnum" style="font-weight:800;margin-left:auto">${window.SaverDS.fmt(2554,r[1])}</span></div>`).join("");}
+// calendar (June 2026, today = 13)
+const cg=document.getElementById("calgrid");if(cg){const dow=["S","M","T","W","T","F","S"];let h=dow.map(d=>`<div class="dow">${d}</div>`).join("");h+=`<div class="d mut">30</div><div class="d mut">31</div>`;for(let d=1;d<=30;d++){const cls=d===13?"d sel":d===20?"d today":"d";h+=`<div class="${cls}">${d}</div>`;}cg.innerHTML=h;}
+// month strip
+const ms=document.getElementById("mstrip");if(ms){const mo=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];ms.innerHTML=mo.map((m,i)=>`<div class="m ${i===5?'on':''}">${m}</div>`).join("");}
+// amount keypad
+const kb=document.getElementById("kbd");if(kb){const keys=["1","2","3","4","5","6","7","8","9",".","0","⌫"];kb.innerHTML=keys.map(k=>`<button>${k}</button>`).join("");}
+// bars
+const br=document.getElementById("bars");if(br){const hs=[40,65,30,80,55,45,70];br.innerHTML=hs.map((v,i)=>`<i class="${i===3?'hi':''}" style="height:${v}%"></i>`).join("");}
 // glyph picker
 const gp=document.getElementById("glyphpick");if(gp&&window.SaverDS){const ks=['coffee','food','transport','shopping','bill','travel'];gp.innerHTML=ks.map((k,i)=>`<span style="height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:${i===0?'var(--acDim)':'var(--surface2)'};border:1px solid ${i===0?'var(--ac)':'var(--border)'}">${window.SaverDS.catTile(k,28)}</span>`).join("");}
 })();

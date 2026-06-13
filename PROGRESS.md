@@ -94,8 +94,10 @@ This document is the single source of truth for the **new Saver** project. Keep 
   - [x] **i18n/RTL + currency**: `SaverDS.fmt`/`currencyFor` (auto-by-country), Foundations §04b shows EGP/USD/GBP/EUR/SAR/AED with country flags + an English-LTR vs Arabic-RTL row (IBM Plex Sans Arabic). `ds.css` has `:lang(ar)/[dir=rtl]`. *(full component RTL mirroring via logical props lands with the coded app.)*
   - [x] **Native-readiness**: `--safe-top/-bottom/-left/-right` tokens (env safe-area) + platform note in §04b. *(applied to app shell/nav in the coded app stage.)*
   - 🔶 *Constitution (DESIGN.md) text still describes the OLD system — update to new system in Phase 2.*
-- **Phase 2 — Component library completeness** ⏳
-  - [ ] Inventory & document every component (anatomy/variants/states), including missing: **bank icon, toggle/switch, segmented tabs, pickers (account/category/date/colour/glyph), amount keypad, sparkline/bar/donut charts, sliders, calendar/month picker, search field, list section headers, badges, stepper, snackbar/toast (done), dialog (done), bottom sheet (done), empty (done), skeleton/loading, paywall card**.
+- **Phase 2 — Component library completeness** ▶️ *in progress*
+  - [x] Batch 1 built + shown in Foundations §09–§12 (classes in `ds.css`): **switch/toggle, search field, stepper, slider, badges** (§09); **date calendar, month strip, amount keypad** (§10); **sparkline, bar chart, skeleton/loading** (§11); **premium/paywall card** (§12).
+  - [x] Already in system from before: buttons, pills, chips, cards, list rows, segmented, progress, ring, fields, toast, dialog, bottom sheet, empty, category & bank icons.
+  - [ ] Remaining: donut chart variant, list section headers/dividers, tabs (top), avatars, tooltip/coachmark, full **anatomy/variants/states** documentation per component (constitution update).
 - **Phase 3 — Full screen map** ⏳
   - [ ] Map ALL detail screens + **where each feature lives** (user said several screens/features still missing). Expand the numbered inventory. Decide placement for: spending **Groups** management, **multi-account** flows, **reports/analytics**, **backup/restore**, **currency switch**, **paywall/premium**, **search**, **month navigation**, account **low-balance** settings, goal **archive/withdraw**, etc.
 - **Phase 4 — Screen-by-screen polish & sign-off** ⏳
