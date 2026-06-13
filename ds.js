@@ -62,6 +62,7 @@ const ICONS={
  activity:`<path d="M3 12h4l3 8 4-16 3 8h4" ${SS}/>`,
  budget:`<path d="M21 12A9 9 0 1 1 12 3v9z" ${SS}/>`,
  you:`<circle cx="12" cy="8" r="4" ${SS}/><path d="M4 21c0-4 4-6 8-6s8 2 8 6" ${SS}/>`,
+ bills:`<path d="M6 2h9l5 5v15H6z" ${SS}/><path d="M9 12h7M9 16h7" ${SS}/>`,
  shield:`<path d="M12 3 5 6v5c0 4.5 3 7.7 7 9 4-1.3 7-4.5 7-9V6l-7-3Z" ${SS}/>`,
  sparkles:`<path d="M12 3l1.8 4.7L18 9.5l-4.2 1.8L12 16l-1.8-4.7L6 9.5l4.2-1.8L12 3Z" ${SS}/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8L19 14Z" ${SS}/>`,
  palette:`<path d="M12 3a9 9 0 1 0 0 18c1 0 1.5-.8 1.5-1.6 0-.5-.3-.9-.5-1.3-.2-.3-.4-.7-.4-1.1 0-.9.7-1.5 1.6-1.5H16a5 5 0 0 0 5-5c0-3.9-4-7.4-9-7.4Z" ${SS}/><circle cx="7.5" cy="11" r="1.2" fill="currentColor" stroke="none"/><circle cx="12" cy="7.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="16.5" cy="11" r="1.2" fill="currentColor" stroke="none"/>`,
@@ -111,8 +112,10 @@ function bankIcon(name,sz){const k=(name||'').toLowerCase().replace(/[^a-z]/g,''
  return `<span class="circ" style="${base};background:var(--catTile);border:1px solid var(--catTileBorder);color:var(--muted)">${mono}</span>`;}
 
 /* ---- phone chrome ---- */
-function navHTML(active){const items=["home","activity","budget","you"];
-  return '<div class="nav">'+items.map(it=>`<div class="it ${active===it?'on':''}">${ico(it,22)}</div>`).join('')+'</div>';}
+function navHTML(active){const items=["home","activity","bills","you"];
+  let h='<div class="nav">';
+  items.forEach((it,i)=>{if(i===2)h+=`<div class="fab">${ico('plus',24)}</div>`;h+=`<div class="it ${active===it?'on':''}">${ico(it,22)}</div>`;});
+  return h+'</div>';}
 function statusHTML(){return `<div class="statusbar"><span>9:41</span><span class="ic"><svg width="17" height="11" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="1"/><rect x="9" y="2" width="3" height="10" rx="1"/><rect x="13.5" y="0" width="3" height="12" rx="1"/></svg><svg width="16" height="11" viewBox="0 0 17 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 4.2C4.8 1 12.2 1 16 4.2M3.6 6.8C6 4.6 11 4.6 13.4 6.8M6 9.3c1.4-1.1 3.6-1.1 5 0"/></svg><svg width="24" height="11" viewBox="0 0 25 12" fill="none"><rect x="1" y="1" width="20" height="10" rx="3" stroke="currentColor" stroke-width="1.2" opacity=".5"/><rect x="3" y="3" width="14" height="6" rx="1.5" fill="currentColor"/><rect x="22.5" y="4" width="1.6" height="4" rx="1" fill="currentColor" opacity=".6"/></svg></span></div>`;}
 
 /* ---- count-up ---- */

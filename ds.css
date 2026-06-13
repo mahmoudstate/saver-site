@@ -214,8 +214,8 @@ header.lead{padding:48px 0 6px}
   background:var(--surface);box-shadow:var(--navShadow);border:var(--cardBorder);border-radius:var(--r-pill);padding:9px 12px;z-index:8}
 .nav .it{width:46px;height:40px;display:flex;align-items:center;justify-content:center;color:var(--faint);border-radius:13px}
 .nav .it.on{color:var(--ac);background:var(--acDim)}
-.fab{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--onacc);
-  display:flex;align-items:center;justify-content:center;box-shadow:0 12px 22px color-mix(in srgb,var(--ac) 38%,transparent);margin:0 5px}
+.fab{width:54px;height:54px;border-radius:18px;background:linear-gradient(135deg,var(--ac),var(--ac2));color:var(--onacc);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 12px 22px color-mix(in srgb,var(--ac) 40%,transparent);margin:0 6px;transform:translateY(-6px) rotate(0deg)}
 .hind{position:absolute;left:50%;bottom:7px;transform:translateX(-50%);width:120px;height:5px;border-radius:var(--r-pill);
   background:color-mix(in srgb,var(--text) 15%,transparent);z-index:8}
 

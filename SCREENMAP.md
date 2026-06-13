@@ -6,10 +6,10 @@
 
 ---
 
-## 0. Navigation model ❓DECISION
-Old app bottom nav = **Home · Bills · History · Settings** + center **＋** (tap=Add, long-press=Quick Add).
-Current new design nav = **Home · Activity · Budget · Profile** + ＋.
-**Decision:** which 4 tabs? Proposal → **Home · History(Activity) · Bills · Budgets** + center ＋, with **Settings/Profile** reachable from Home top-right avatar. (Savings/Goals + Quick Actions live under Settings or Home shortcuts.)
+## 0. Navigation model ✅ LOCKED
+**Bottom nav = Home · Activity · [＋] · Bills · Profile.** Center **＋** = a **raised squircle (rounded-square) button** in accent gradient (matches the brand's rounded-square motif; not a plain circle). Tap ＋ = Add; long-press = Quick Add.
+- **Budgets** & **Goals** reached from Home cards ("See all") / Profile, not a tab.
+- **Settings** lives under the **Profile** tab.
 
 ---
 
@@ -130,14 +130,13 @@ txn(type: expense|income|saving|transfer|goal_withdraw|goal_return) · bank(lowB
 
 ---
 
-## 9. DECISIONS NEEDED (review together)
-1. **Nav tabs** (§0) — which 4 + where Settings/Profile.
-2. **Projects** in Budgets — include in v1? (adds Projects tab + detail + editor)
-3. **Groups** (legacy) — keep, or fully fold into Budgets? (old app is migrating away)
-4. **Transfer** type — include now? (4th add type)
-5. **Story Tour vs Coach Tour** — build both, or one for v1?
-6. **Subscription/Installment** depth — full pickers/wizards now, or simplified add in v1?
-7. **v1 scope** — what ships first vs later (we can tag screens v1/v2).
+## 9. DECISIONS (locked with user)
+1. ✅ **Nav** = Home · Activity · [＋ squircle] · Bills · Profile (Settings under Profile). (§0)
+2. ✅ **Projects** in Budgets — **include now**.
+3. ✅ **Groups** (legacy) — **fold into Budgets** (don't build as separate).
+4. ✅ **Transfer** — **keep Add segmented at 3** (Expense/Income/Saving); Transfer is a **separate screen [34]** opened from an account's **"Move"** action (not a 4th segment).
+5. ✅ **Scope** = **core v1 first**, defer the rest to v2 (tag screens). Core = daily loop + essential setup (see PROGRESS). v2 = Story Tour, Coach Tour, PWA-install help, full FAQ, long installment wizard, detailed service picker.
+6. ⏳ Story vs Coach tour, subscription/installment depth → v2.
 
 ---
 
