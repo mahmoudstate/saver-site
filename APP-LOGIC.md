@@ -100,3 +100,5 @@ Per-field constraints (from old app — LOCKED):
 - **Name (account/category/goal/bill)** · required · error "Give it a name so you can spot it later."
 - **Transfer destination** · must differ from source · error "Same account, really? Pick a different one."
 Tone: friendly/playful but always clear about the unit and the fix. No emoji — use our icons.
+
+- **Entry method:** large/arbitrary counts use a **numeric keypad (direct type)** + **quick-pick chips** for common values (e.g. 6/12/24/36/48/60). Steppers only for tiny ranges (reminder 0–7). Day uses a 1–28 picker. Never force many taps.
