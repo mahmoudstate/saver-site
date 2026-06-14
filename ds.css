@@ -9,7 +9,7 @@
   --stage:#E7EAF0; --bg:#F4F4F8; --surface:#FFFFFF; --card:#FFFFFF; --surface2:#F1F2F6;
   --border:#E6E7EE; --track:#EBECF1;
   --catTile:#F1F2F6; --catTileBorder:#E6E7EE;
-  --text:#15161C; --muted:#6B7280; --faint:#AAAEBA;
+  --text:#2B2E35; --muted:#6B7280; --faint:#AAAEBA;
   --red:#E5544E; --redDim:#FCE9E8;
   --blue:#2563EB; --blueDim:#DCE7FE;
   --yellow:#D97706; --yellowDim:#FCEFD6;
@@ -43,7 +43,7 @@
   --acDim:color-mix(in srgb,var(--ac) 14%,transparent);
   /* hero — tinted by accent, always bright with dark text so it pops on any bg */
   --heroGrad:linear-gradient(155deg, color-mix(in srgb,var(--ac) 40%,#fff) 0%, color-mix(in srgb,var(--ac) 66%,#fff) 100%);
-  --heroText:#15201C; --heroSub:rgba(21,30,28,.60); --heroChip:rgba(255,255,255,.22);
+  --heroText:#1B332C; --heroSub:rgba(27,51,44,.62); --heroChip:rgba(255,255,255,.22);
   /* spacing scale (4pt) */
   --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:20px; --s6:24px; --s7:32px; --s8:40px;
   /* radius */
