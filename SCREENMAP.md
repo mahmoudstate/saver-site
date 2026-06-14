@@ -149,3 +149,6 @@ txn(type: expense|income|saving|transfer|goal_withdraw|goal_return) · bank(lowB
 
 ---
 _Generated Phase 3 · 2026-06-13 · review & lock with the user, then expand `screens.html`._
+
+## Design QA — TODO (focused pass)
+- **Unify text arrangement inside fields/chips/cards** across the app: pick ONE consistent label↔value pattern (e.g., micro-label on top + value below) and apply everywhere; ensure chips are single-line (done: .chip nowrap). Audit: installment form fields, smart-filter date pills, overview/bank cards, detail rows.

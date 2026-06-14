@@ -128,7 +128,7 @@ header.lead{padding:48px 0 6px}
 .pill-red{background:var(--redDim);color:var(--red)}
 .pill-yellow{background:var(--yellowDim);color:var(--yellow)}
 .pill-green{background:color-mix(in srgb,var(--success) 13%,transparent);color:var(--success)}
-.chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);color:var(--muted);font-weight:700;font-size:12.5px;padding:7px 13px;border-radius:var(--r-pill);border:1px solid var(--border)}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);color:var(--muted);font-weight:700;font-size:12.5px;padding:7px 13px;border-radius:var(--r-pill);border:1px solid var(--border);white-space:nowrap;flex-shrink:0}
 
 /* ---------- 7. ICONS / CATEGORY CIRCLES ---------- */
 .ib{width:40px;height:40px;border-radius:50%;background:var(--surface);box-shadow:var(--cardShadow);border:var(--cardBorder);
